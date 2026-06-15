@@ -10,6 +10,109 @@ function isHomePage() {
   return last === "" || last === "index.html";
 }
 
+// ---- Image lightbox with zoom (work images only) ----------------------------------
+// Event-delegated on document, so it survives Barba content swaps. Targets only images
+// inside #pageWork .imageWapper (work images). The hero/intro image uses .imageWapper too
+// but lives in #works_info_image (outside #pageWork), so scoping to #pageWork excludes it.
+// Behaviour: click image to toggle zoom (centred on the click point); move the mouse
+// (or drag on touch) to pan while zoomed; click the backdrop or press Escape to close.
+(function () {
+  console.log("[lightbox] work-image-only build active (#pageWork .imageWapper)");
+  let isZoomed = false;
+
+  function lbImg() { return document.getElementById("imgLightboxImg"); }
+
+  function openLightbox(src, alt) {
+    const ov = document.getElementById("imgLightbox");
+    if (!ov) return;
+    const img = lbImg();
+    img.setAttribute("src", src);
+    img.setAttribute("alt", alt || "");
+    resetZoom();
+    ov.classList.add("is-open");
+    document.body.style.overflow = "hidden"; // stop background scroll while open
+  }
+
+  function closeLightbox() {
+    const ov = document.getElementById("imgLightbox");
+    if (!ov) return;
+    resetZoom();
+    ov.classList.remove("is-open");
+    document.body.style.overflow = "";
+  }
+
+  function resetZoom() {
+    const img = lbImg();
+    if (!img) return;
+    isZoomed = false;
+    img.classList.remove("is-zoomed");
+    img.style.transformOrigin = "center center";
+  }
+
+  // Set the zoom focal point from a pointer position over the image (in %).
+  function setOriginFromPoint(clientX, clientY) {
+    const img = lbImg();
+    if (!img) return;
+    const r = img.getBoundingClientRect();
+    let x = ((clientX - r.left) / r.width) * 100;
+    let y = ((clientY - r.top) / r.height) * 100;
+    x = Math.max(0, Math.min(100, x));
+    y = Math.max(0, Math.min(100, y));
+    img.style.transformOrigin = x + "% " + y + "%";
+  }
+
+  function toggleZoom(clientX, clientY) {
+    const img = lbImg();
+    if (!img) return;
+    isZoomed = !isZoomed;
+    if (isZoomed) {
+      setOriginFromPoint(clientX, clientY);
+      img.classList.add("is-zoomed");
+    } else {
+      img.classList.remove("is-zoomed");
+      img.style.transformOrigin = "center center";
+    }
+  }
+
+  // Click: open from a thumbnail, toggle zoom on the open image, or close on backdrop.
+  document.addEventListener("click", function (e) {
+    const thumb = e.target.closest("#pageWork .imageWapper img");
+    if (thumb) { openLightbox(thumb.currentSrc || thumb.src, thumb.getAttribute("alt")); return; }
+
+    const ov = document.getElementById("imgLightbox");
+    if (!ov || !ov.classList.contains("is-open")) return;
+
+    if (e.target.closest("#imgLightboxImg")) {
+      toggleZoom(e.clientX, e.clientY); // clicking the image zooms, not closes
+    } else if (e.target.closest("#imgLightbox")) {
+      closeLightbox();                  // clicking the backdrop closes
+    }
+  });
+
+  // Pan while zoomed (mouse).
+  document.addEventListener("mousemove", function (e) {
+    if (!isZoomed) return;
+    setOriginFromPoint(e.clientX, e.clientY);
+  });
+
+  // Pan while zoomed (touch); prevent the page from scrolling under the finger.
+  document.addEventListener("touchmove", function (e) {
+    if (!isZoomed) return;
+    const t = e.touches[0];
+    if (!t) return;
+    setOriginFromPoint(t.clientX, t.clientY);
+    e.preventDefault();
+  }, { passive: false });
+
+  // Escape closes.
+  document.addEventListener("keyup", function (e) {
+    if (e.key === "Escape") { closeLightbox(); }
+  });
+})();
+// -----------------------------------------------------------------------------------
+
+
+
 // True while the intro is still playing (home page, not yet finished).
 function introIsRunning() {
   return !introStatus && introScene < 7;
