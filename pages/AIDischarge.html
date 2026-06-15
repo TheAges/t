@@ -29,7 +29,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
 
     <!-- JS SCRIPTS -->
-    <script>window.SITE_ROOT = "/portfolio-andrea-picardi/";</script>
+    <script>
+      // Derive SITE_ROOT from the page's own location so the same files work on the
+      // GitHub project subpath, on a future custom domain (root), and offline in a
+      // local preview. Structure assumed: root holds index.html, sub-pages live in /pages/.
+      (function () {
+        var p = window.location.pathname;
+        p = p.replace(/[^\/]*\.html?$/, ""); // strip a trailing file name if present
+        p = p.replace(/pages\/$/, "");         // climb out of /pages/ to the site root
+        if (!p.endsWith("/")) p += "/";
+        window.SITE_ROOT = p;
+      })();
+    </script>
     <script src="../js/main.js" defer></script> <!-- <script src="js/main.js" defer></script> -->
 
     <!-- TWEEN LIBRARY -->
