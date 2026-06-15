@@ -1,0 +1,176 @@
+﻿{
+  "AI_Discharge": {
+    "Work_ID": 0,
+    "Is_visible": true,
+    "Is_archived": false,
+
+    "Title": "Trustworthy AI for Doctor-Led Medical Discharge",
+
+    "Is_WIP": false,
+    "Start_year": "20xx",
+    "End_year": "20xx",
+
+    "Tags": [],
+    "Category": "<span class='nb'>Healthcare AI </span>| <span class='nb'> Human-AI Interaction </span>| <span class='nb'> Human-in-the-Loop </span> |",
+
+    "Short_description": "",
+
+    "Role": [],
+    "Team_members": [],
+
+    "Is_client_visible": false,
+    "Client": "",
+    "Client_url_available": false,
+    "Client_url": "",
+
+    "Cover_image_url": "",
+
+    "Webpage_available": true,
+    "Webpage_url": "pages/AIDischarge.html",
+    "Webpage_html": "",
+
+    "Accent_page_color": "#1f89db",
+    "Background_color": "#FFFFFF",
+    "Background_Line_color": "#1f89db"
+  },
+
+  "Automotive_Gesture": {
+    "Work_ID": 1,
+    "Is_visible": true,
+    "Is_archived": false,
+
+    "Title": "Automotive Gestures & Mid-Air Haptics",
+
+    "Is_WIP": false,
+    "Start_year": 2021,
+    "End_year": 2022,
+
+    "Tags": ["Tag A","Tag B","Tag C"],
+    "Category": "<span class='nb'>Automotive HMI </span>| <span class='nb'> Natural User Interface </span>| <span class='nb'> User Study </span> |",
+
+    "Short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula purus eu nibh tempor, fringilla placerat sapien malesuada. Proin pulvinar, mauris nec pharetra congue, augue nulla euismod velit, eu ullamcorper dolor neque sit amet magna. In rhoncus turpis sit amet interdum aliquam.",
+
+    "Role": ["A","B","C"],
+    "Team_members": ["Alice","Bob","Carl"],
+
+    "Is_client_visible": false,
+    "Client": "ACME INC",
+    "Client_url_available": false,
+    "Client_url": "http://www.ACME.com",
+
+    "Cover_image_url": "http://www.exemple.com/img_path",
+
+    "Webpage_available": true,
+    "Webpage_url": "pages/AutomotiveGestures.html",
+    "Webpage_html": "<div> <p> Lorem ipsum dolor sit amet </p> </div>",
+
+    "Accent_page_color": "#1aa383",
+    "Background_color": "#FFFFFF",
+    "Background_Line_color": "#1aa383"
+  },
+
+  "Oxama": {
+    "Work_ID": 2,
+    "Is_visible": true,
+    "Is_archived": false,
+
+    "Title": "OXAMA",
+
+    "Is_WIP": false,
+    "Start_year": "20xx",
+    "End_year": "20xx",
+
+    "Tags": [],
+    "Category": "<span class='nb'>Wearable Companion App </span>| <span class='nb'> Freediving Biometric Data </span>| <span class='nb'> UX Design </span> |",
+
+    "Short_description": "",
+
+    "Role": [],
+    "Team_members": [],
+
+    "Is_client_visible": false,
+    "Client": "",
+    "Client_url_available": false,
+    "Client_url": "",
+
+    "Cover_image_url": "",
+
+    "Webpage_available": true,
+    "Webpage_url": "pages/Oxama.html",
+    "Webpage_html": "",
+
+    "Accent_page_color": "#32a3cc",
+    "Background_color": "#FFFFFF",
+    "Background_Line_color": "#32a3cc"
+  },
+
+  "Sunprime": {
+    "Work_ID": 3,
+    "Is_visible": true,
+    "Is_archived": false,
+
+    "Title": "Sunprime Projects Platform",
+
+    "Is_WIP": false,
+    "Start_year": "20xx",
+    "End_year": "20xx",
+
+    "Tags": [],
+    "Category": "<span class='nb'>Enterprise UX </span>| <span class='nb'> Information Architecture </span>| <span class='nb'> Workflow Mapping </span> |",
+
+    "Short_description": "",
+
+    "Role": [],
+    "Team_members": [],
+
+    "Is_client_visible": false,
+    "Client": "",
+    "Client_url_available": false,
+    "Client_url": "",
+
+    "Cover_image_url": "",
+
+    "Webpage_available": true,
+    "Webpage_url": "pages/Sunprime.html",
+    "Webpage_html": "",
+
+    "Accent_page_color": "#68aa5f",
+    "Background_color": "#FFFFFF",
+    "Background_Line_color": "#68aa5f"
+  },
+
+  "Frankfurt_Messe": {
+    "Work_ID": 4,
+    "Is_visible": true,
+    "Is_archived": false,
+
+    "Title": "Frankfurt Messe Event  System",
+
+    "Is_WIP": false,
+    "Start_year": "20xx",
+    "End_year": "20xx",
+
+    "Tags": [],
+    "Category": "<span class='nb'>Event Platform </span>| <span class='nb'> Access Control </span>| <span class='nb'> Product Design </span> |",
+
+    "Short_description": "",
+
+    "Role": [],
+    "Team_members": [],
+
+    "Is_client_visible": false,
+    "Client": "",
+    "Client_url_available": false,
+    "Client_url": "",
+
+    "Cover_image_url": "",
+
+    "Webpage_available": true,
+    "Webpage_url": "pages/FrankfurtMesse.html",
+    "Webpage_html": "",
+
+    "Accent_page_color": "#015ca9",
+    "Background_color": "#FFFFFF",
+    "Background_Line_color": "#015ca9"
+  }
+}

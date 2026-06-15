@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Picardi Andrea CV - Interaction Designer in Milan" />
+    <meta name="keywords" content="designer, interaction, CV, UI, UX, prototyping, user, testing," />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Picardi Andrea Portfolio</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB4PSIyNSIgeT0iMjUiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg==">
+
+    <!-- INITIALIZE JS LIBRARIES -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  
+    <!-- CSS STYLESHEETs -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap" rel="stylesheet">
+
+    <!-- MATERIAL SYMBOLS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+
+    <!-- JS SCRIPTS -->
+    <script>window.SITE_ROOT = "/portfolio-andrea-picardi/";</script>
+    <script src="../js/main.js" defer></script> <!-- <script src="js/main.js" defer></script> -->
+
+    <!-- TWEEN LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/20.0.0/tween.umd.js"></script>
+
+    <!-- THREE.JS SCRIPTS -->
+    <script src="../js/lib/three.min.js"></script>
+    <script src="../js/main_three.js"></script>
+
+    <!-- SLIDEING-SCROLL LIBRARY -->
+    <!-- <script src="js/lib/sliding-scroll.min.js"></script> -->
+
+    
+    <!-- BARBA.JS LIBRARY -->
+    <script src="../js/lib/barba.umd.js"></script>
+
+    <!-- ANIMATION LIBRARY -->
+    <script src="../js/lib/anime.min.js"></script>
+
+
+
+    <style>
+      /* NO JS Cover CSS */
+        .hide {
+          display: none !important;
+        }
+
+        @keyframes fadeInNoJS {
+          from {opacity: 0;}
+          to {opacity: 1;}
+        }
+      /* END NO JS Cover CSS */
+
+    </style>
+  </head>
+  <body>
+
+  <!-- NO JS COVER HTML -->
+
+    <div id="noJsCover" style="animation: fadeInNoJS 1s linear;">
+      <div id="noJsWrapper"   style="margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">
+        <img src="../res/Images/scribble.gif" style="display: block; margin-left: auto; margin-right: auto; width: 120px;">
+        <p style="text-align:center;">
+          This website needs JavaScript in order to work properly,<br><a href="https://www.enable-javascript.com/">Plase enable it</a> to continue with the navigation.
+        </p>
+        <p class="d-none" style="text-align:center;">
+          Otherwise you can download my complete portfolio <a href="../res/Picardi_Andrea_Portfolio_It.pdf">here</a>
+        </p>
+      </div>
+    </div>
+
+  <!-- END NO JS COVER HTML -->
+
+  <!-- 
+  <!-- LOADING COVER HTML ->
+
+  <div id="loading-warning-wrapper"  class=" d-none row vh-100 align-items-center justify-content-center">
+    <div id="loading-warning" class="col-4">
+      <div class="row align-items-center justify-content-center">
+        <span>
+          <img src="../res/Images/loading.gif" width="40px" alt="">
+          <br>
+          <br>
+          <span class="align-middle"> LOADING </span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- END LOADING COVER HTML -->
+
+  <!-- LOADING COVER JavaScript snippet ->
+
+    <script type="text/javascript">
+      let loadingWarning = setTimeout(() => { document.getElementById("loading-warning-wrapper").classList.remove("d-none"); }, 3000);
+    </script>
+
+  <!-- LOADING COVER JavaScript snippet ->
+  -->
+
+  <div id="contacts-wrapper" class="d-none">
+    <div class="container">
+      <div class="row align-items-center justify-content-center vh-100">
+        <div id="contacts-background" onclick="toggleContacts()"></div>
+        <div id="contacts-panel" class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
+          <div class="row">
+            <div class="d-flex justify-content-between">
+              <span id="contacts_header">Let's continue the conversation. Find me at:</span><button class="short_button hoverable" onclick="toggleContacts()"><span class="material-symbols-outlined button-icon">close</span></button>
+            </div>
+          </div>
+          <div class="row">
+            <address id="contacts" class="text">
+              <ul id="contactsList">
+                <!--
+                <li>&nbsp;</li>
+                <li class="contactsElement"><a href="tel:(+xx) xxx.xxx.xxxx"><svg class="ContactsIcons" src="../res/icons/IconaCELL.svg" alt="cellphone link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850.39 850.39"><title>IconaTELE</title><path d="M425.2,0C190.37,0,0,190.37,0,425.2S190.37,850.39,425.2,850.39,850.39,660,850.39,425.2,660,0,425.2,0ZM614.76,591.7c-5.25,4.91-10.94,9.38-16,14.48C568.27,636.91,530.5,645.41,489,641.91c-29.39-2.47-55.84-14.09-80.16-29.8C335.59,564.79,279.5,501.87,241.59,423.19c-12.38-25.69-19-53.05-19-86.63.71-30.16,9.44-62.51,32.62-89.63,11.19-13.09,24.92-23.62,38.72-33.74,11.49-8.42,25-8.41,35.44,1,26.2,23.53,45.25,52.24,53.67,86.73,3.54,14.52-1.43,28-13.45,37.95-8.52,7.05-17.19,13.93-25.82,20.86-15.81,12.68-19.71,25.05-14.05,44.64A94.83,94.83,0,0,0,340,427a310.67,310.67,0,0,0,78.82,87.81c3.08,2.33,6.27,4.56,9.56,6.59,21.62,13.34,37.9,11.42,55.89-6.6,5.08-5.09,9.81-10.54,15-15.51,16.7-16,37.14-19.71,57.09-8.07a240.78,240.78,0,0,1,62.82,53.61C632.89,561.15,630.53,576.93,614.76,591.7Z"/></svg><span>(+39) 348.0373502 &nbsp;</span></a></li>
+                <li class="contactsElement"><a href="mailto:picardi.andrea@virgilio.it"><svg class="ContactsIcons" src="../res/icons/IconaEMAIL.svg" alt="email link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 849.22 849.22"><title>IconaEMAIL</title><path d="M429.5,342.26c-49.14,1.54-91.6,44.25-92.92,93.47-1,37.53,22,65.65,58.92,72.15,47.29,8.32,97.2-29.81,106.51-81.38C510.43,379.81,476.85,340.78,429.5,342.26Z" transform="translate(-1.17 -1.01)"/><path d="M425.78,1C191.28,1,1.17,191.12,1.17,425.62S191.28,850.23,425.78,850.23s424.61-190.1,424.61-424.61S660.29,1,425.78,1ZM671,552.16c-17.94,36-47.6,55.16-87.41,54.32-40.41-.85-70.14-21.29-86.06-58.85-4.84-11.42-7.59-13-19-6.56C409.33,580.47,329,559,296.7,493.46c-33.88-68.84,3.32-160.07,79.49-191.64,48.68-20.17,95.44-16.33,137.7,17.84,3.27,2.65,5.33,3.58,11.29,2.29,15.18-3.28,30.8,3.31,46,6.86,6.36,1.49,2.16,8.62,1.37,12.91q-13.75,74.38-28,148.66c-2.24,11.79-4.43,23.58-.19,35.34,6,16.64,22.18,28.88,39.75,28.83,19.22-.06,33-9.58,40.86-27.09,37.82-84,29.26-163.38-27.67-235.35C536,214.7,432.06,189.33,341.55,226.56,252.63,263.13,196.39,355,204.8,449.87A222.5,222.5,0,0,0,381.32,648.49a183.38,183.38,0,0,0,33.88,4.07c8.84.18,11.3,3.37,10.68,11.56-.57,7.56-1.06,15.34.08,22.76,2.6,17-5.25,19.12-20,18C267.77,694.23,156.15,579.2,152.26,442.72c-4.08-143.41,97.52-264,237.84-282.29,164-21.39,309.35,105.9,309.32,287.62C699.28,473.81,689.91,514.15,671,552.16Z" transform="translate(-1.17 -1.01)"/></svg><span>picardi.andrea@virgilio.it &nbsp;</span></a></li>
+                <li class="contactsElementSeparator"></li>
+                -->
+                <li class="contactsElement"><a href="https://www.linkedin.com/in/Andrea-Picardi"><svg class="ContactsIcons" src="../res/icons/In_LOGO.svg" alt="LinkedIn link" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 396 395.9" xml:space="preserve"> <path d="M0,0v395.9H396V0H0z M117.6,334.9c0,1.8-0.3,2.6-2.4,2.6c-18.1,0-36.2,0-54.3,0h-2.3l0,0V150.8c0-2.8,0-2.8,2.9-2.8h53.4 c2.8,0,2.8,0,2.8,2.8C117.5,212.2,117.5,273.5,117.6,334.9z M88,122.8c-0.3,0-0.6,0-0.8,0c-18.7-0.3-33.7-15.7-33.4-34.4 C53.5,69.8,69.3,54,88,54.1c0.1,0,0.1,0,0.2,0c18.9,0,34.3,15.4,34.2,34.4C122.3,107.8,107.5,122.7,88,122.8z M337.9,334.9v2.5 l-0.1,0.1h-56.7c-2.7,0-2.7,0-2.7-2.6c0-33.8,0-67.7-0.1-101.6c0.1-7.6-1.3-15.2-4.2-22.3c-4.1-9.2-11.2-14.1-21.2-15.2 c-5.7-0.7-11.5-0.2-17,1.4c-9.6,2.8-15.7,9.3-19,18.6c-2.3,6.2-3.5,12.7-3.5,19.3c-0.1,33.2-0.3,66.4-0.4,99.6c0,2.9,0,2.9-2.8,2.9 c-17.9,0-35.8-0.1-53.7,0c-1.9,0-2.6-0.5-2.6-2.5c0-61.5,0-123,0-184.5c0-2.5,0.1-2.5,2.5-2.5H208c2.6,0,2.6,0,2.6,2.7V172 c0,0.6,0.1,1.3,0.1,2l0.5,0.1c0.5-0.8,0.9-1.6,1.4-2.4c8.3-12.8,19.9-21.1,34.5-25.4c5.8-1.7,11.7-2.6,17.7-2.7 c11.4-0.3,22.5,0.9,33.3,4.7c11.7,4,21.6,12.2,27.8,22.9c5.2,8.8,8,18.4,9.6,28.4c1.1,6.2,1.7,12.4,1.9,18.7 c0.3,26.6,0.4,53.3,0.5,79.9C337.9,310.5,337.9,322.8,337.9,334.9z"/></svg><span>www.linkedin.com/in/Andrea-Picardi &nbsp;</span></a></li>
+                <li class="contactsElement"><a href="https://www.researchgate.net/profile/Andrea-Picardi"><svg class="ContactsIcons" src="../res/icons/Re_LOGO.svg" alt="ResearchGate link"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" xml:space="preserve"> <path d="M0,0v32h32V0H0z M22.1,28.6c-0.3,0.4-1.5,0.5-3,0.2c-2.3-0.4-3.7-1.8-7.1-6.9c-1.2-1.7-1.2-1.7-2.3-1.8	c-1.7-0.1-1.5-0.4-1.5,3.2c0.1,4.1,0,4,2.4,4.4c0.6,0.1,0.7,0.1,0.7,0.5c0,0.4,0,0.4-4.2,0.4c-3.9,0-4.2,0-4.3-0.2 c-0.2-0.5,0.1-0.7,0.9-0.8c1-0.2,1.5-0.6,1.6-1.3c0.1-0.3,0.1-3.7,0-7.7c0-8.3,0-7.9-1.5-8.2c-1-0.2-1.3-0.4-1.1-0.8	C2.8,9.4,3,9.4,7.4,9.3c6.5-0.1,7.7,0.1,9.5,1.6c1.8,1.6,2.1,4.1,0.6,6.2c-0.6,0.9-1.9,1.9-2.9,2.3c-0.5,0.2-0.8,0.4-0.8,0.4 c0,0.2,1.5,2.3,2.4,3.4c2.4,3,3.8,4.1,5.1,4.5C22.1,28,22.3,28.2,22.1,28.6z M29.3,9.5c-0.1,2.1-0.7,3.2-2.1,3.8	c-0.9,0.4-2.2,0.5-3.1,0.4c-2.5-0.5-3.3-2-3.2-5.9c0.1-2.2,0.2-2.8,1.1-3.7c1.5-1.6,5.1-1.4,6.5,0.3c0.6,0.7,0.5,0.9-0.3,1.2 c-0.6,0.2-0.6,0.2-1.2-0.4c-1.4-1.3-3.7-0.8-4.1,0.9c-0.2,0.8-0.2,3.9,0,4.7c0.6,2,3.9,2,4.5,0c0.4-1.3,0.3-1.4-1.3-1.5 c-0.8,0-0.8,0-0.8-0.7c0-0.6,0-0.6,1.8-0.7C29.4,7.9,29.4,7.8,29.3,9.5z"/>	<path d="M13.3,11.2c-0.8-0.3-1-0.4-3-0.4c-2.1,0-2.1,0-2.2,3.7c0,2,0,3.8,0,3.9c0.1,0.3,3.8,0.2,4.7-0.2 C16.1,16.9,16.3,12.5,13.3,11.2z"/></svg><span>www.researchgate.net/profile/Andrea-Picardi &nbsp;</span></a></li>
+                <li class="contactsElement"><a href="https://www.github.com/TheAges"><svg class="ContactsIcons" src="../res/icons/GitLab_LOGO.svg" alt="GitHab link" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 396 396" xml:space="preserve"> <path d="M0,0v396h396V0H0z M244.5,344.4c-7.7,1.5-10.3-3.3-10.3-7.3c0-5.1,0.4-21.3,0.4-41.4c0-13.9-4.8-23.1-10.3-27.9 c33.7-3.7,68.9-16.5,68.9-74.4c0.2-15-5.3-29.6-15.4-40.7c1.5-3.7,7-19.1-1.5-40c0,0-12.4-4-41.4,15.4c-24.7-6.9-50.8-6.9-75.5-0.1 c-28.6-19.4-41.4-15.4-41.4-15.4c-8.1,20.9-2.9,36.3-1.5,40c-10.1,11.1-15.6,25.7-15.4,40.7c0,57.9,35.6,71.1,68.9,74.8 c-4.4,3.7-8.1,10.3-9.5,20.2c-8.8,4-30.4,10.6-44-12.5c0,0-8.1-14.3-23.1-15.4c0,0-14.7-0.4-1.1,9.2c0,0,9.9,4.4,16.9,22 c0,0,8.8,27.2,51,18c0.4,12.8,0.4,24.6,0.4,28.2c0,4-2.6,8.8-10.3,7.3C90.2,324.9,46.9,268.4,46.9,201.7 c0-83.4,67.6-151.1,151.1-151.1c83.2,0,151.1,67.8,150,150.3C348,267.7,304.7,324.1,244.5,344.4z"/></svg><span>www.github.com/TheAges &nbsp;</span></a></li>
+              </ul>
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="background-canvas"></div>
+
+  <div id="main" class="container d-none">
+
+    <div id="first-section"  class="row vh-100 align-items-center hide">
+      <div class=" col-12  col-sm-12 col-md-12 col-lg-8 col-xl-7">
+        <div id="cover" >
+          <p id="paragrapghTop" class="with-backcover">In today's ever-changing technological landscape, where themes like Artificial Intelligence Systems, Asset Digitalisation, and Virtual and Simulated Worlds are the driving forces, the conversation between people and the tools we design matters more than ever.</p>
+          <p id="first-divider">&#13 &#13</p>
+          <p id="paragrapghBottom" class="with-backcover">Hi, I'm Andrea, an HMI Specialist and Interaction Designer looking to map, understand, and make this conversation possible.</p>
+            
+          <div id="cursor" class="d-none">&#9608</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="second-section" class="row"> <!-- class="row min-vh-100 align-items-center" -->
+      <div class="col-12">
+
+        <div id="topBar-Wrapper" class="">
+          <div  class="row sticky-top align-items-baseline justify-content-end">
+            <div id="nav-menu" class="col-12 col-lg-3 order-1 order-lg-2 appearAble">
+              <div id="nav-menu-BG"></div>
+              <div class="row">
+                <div id="homeMenuButton-works"  class="col-auto">
+                  <a onclick="goToHomepage()"> <!--</a>href="../index.html"-->
+                    <div class="nav-menu-item hoverable" >
+                      <span class="material-symbols-outlined button-icon">home</span>
+                    </div>
+                  </a>
+                </div>
+                <div id="homeMenuButton-about"  class="col">
+                  <a onclick="goToHomepage()"> <!--</a>href="../index.html"-->
+                    <div class="nav-menu-item hoverable" >
+                      <span>Home</span>
+                    </div>
+                  </a>
+                </div>
+                <div id="aboutMenuButton" class="col">
+                  <a onclick="goToAboutpage()">  <!--href="about.html"-->
+                    <div class="nav-menu-item hoverable" >
+                      <span>About Me</span>
+                    </div>
+                  </a>
+                </div>
+                <div id="contactsMenuButton"  class="col">
+                  <a onclick="toggleContacts()">
+                    <div class="nav-menu-item hoverable">
+                      <span>Contact</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="content" data-barba="wrapper" class="hide">
+          <div id="belowTopbar-Wrapper" class="barbaContent" data-barba="container" data-barba-namespace="homepage" data-work-key="Frankfurt_Messe">
+            
+          <div id="firstParagraph" class="row align-items-baseline">
+            <div class="col-12 col-lg-8 order-2 order-lg-1 with-backcover">
+              <p id="workTitle">Frankfurt Messe Event Access &amp; Engagement</p>
+
+              <div id="work_informations">
+
+                <div id="works_info_underdescription_row" class="row align-items-baseline work_info_row">
+                  <div class="col-12">
+                    <div class="work_info_underdescription"> A dual-platform solution for access control, guest-exhibitor tracking and real-time attendee engagement. </div>
+                  </div>
+                </div>
+
+                <div id="works_info_image" class="row align-items-baseline work_info_row">
+                  <div class="col-12">
+                    <div class="imageWapper">
+                      <img src="../res/Images/Frankfurt_Messe/crowd.png" Title="Original image credit to Laura Heimann - modified with NanoBanana" alt="Intro image - crowd at a trade show">
+                    </div>
+                  </div>
+                </div>
+
+                <div id="works_info_client+year+cat_row" class="row align-items-baseline work_info_row">
+
+                  <div class="col-12 col-md-4">
+                    <div id="client+year_inner_row" class="row align-items-baseline work_info_inner_row">
+
+                      <div class="col-6 col-md-12">
+                        <div class="work_info_header work_info_underline"> Client </div>
+                        <div class="work_info_text"> Runelab - Frankfurt Messe </div>
+                      </div>
+
+                      <div class="col-6 col-md-12">
+                        <div class="work_info_header work_info_underline"> Year </div>
+                        <div class="work_info_text"> 2021 </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-8">
+                    <div class="work_info_header work_info_underline"> Categories </div>
+                    <div id="tag_container" >
+                      <span class="work_info_tag">User&emsp13;Flow&emsp13;Design</span>
+                      <span class="work_info_tag">Wireframe&emsp13;design</span>
+                      <span class="work_info_tag">Mockup&emsp13;creation</span>
+                      <span class="work_info_tag">Interface&emsp13;Design</span>
+                      <span class="work_info_tag">Mobile&emsp13;App&emsp13;Design</span>
+                      <span class="work_info_tag">Access&emsp13;Control&emsp13;Systems</span>
+                      <span class="work_info_tag">Event&emsp13;Management&emsp13;Solutions</span>
+                      <span class="work_info_tag">Real-Time&emsp13;Data&emsp13;Tracking</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="works_info_brief_row" class="row align-items-baseline work_info_row">
+                  <div class="col-12">
+                    <div class="work_info_header work_info_underline">Brief</div>
+                    <div class="work_info_text"> In collaboration with Frankfurt Messe, our team at Runelab developed an access control system for event staff and a guest-exhibitor application for networking and event management. With just three months before the SPS 2022 exhibition, I led the design process under tight deadlines. I focused on creating efficient check-ins, real-time event tracking, smooth exhibitor-guest interactions, and intuitive event navigation. The result was a set of user-friendly solutions that met the client's needs and delivered seamless experiences for both staff and attendees. </div>
+                  </div>
+                </div>
+
+                <div id="works_info_roles_w_team_row_4th" class="row align-items-baseline work_info_row">
+                  <div class="col-12" >
+                    <div class="work_info_header work_info_underline">Role(s)</div>
+                    <ul id="rolesList">
+                      <li>Design Lead</li>
+                      <li>Product Designer</li>
+                      <li>Experience Designer</li>
+                      <li>Interaction &amp; Visual Designer</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div id="works_info_external_row" class="row align-items-baseline work_info_row">
+                  <div class="col-12">
+                    <div class="work_info_header work_info_underline">Exteral Links</div>
+                    <ul id="linkList">
+                      <li><a href="https://www.spsitalia.it/">Client website</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div  id="pageWork" class="row">
+            <div class="col-12 col-lg-8">
+              <div class="row with-backcover">
+
+                <div>
+
+                  <div class="col-12 workSectionTitle">
+                    The Challenge &amp; Design Process
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>For the SPS Italia Smart Production Solutions exhibition of 2022, Frankfurt Messe partnered with Runelab to develop a digital solution for event access control and guest-exhibitor interactions. However, with only three months before the event, there was an urgent need to implement a functional system.</p>
+                    <p>The key challenges were:</p>
+                  </div>
+
+                  <div class="col-12 workText">
+                    <ul class="list--spaced-flat">
+                      <li><strong>Lack of a Ticketing &amp; Access Control System</strong> <br> Event staff needed a fast and reliable tool to verify tickets and manage guest flow at entry points, connected to a backend for real-time tracking.</li>
+                      <li><strong>Guest-Exhibitor Interaction Under COVID Restrictions</strong> <br> Traditional networking methods were limited, requiring a digital platform to facilitate exhibitor-guest connections, event bookings, and information sharing while maintaining safety protocols.</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>With the short timeline, the goal was to design and deploy a seamless, intuitive experience that would integrate with Frankfurt Messe's existing infrastructure.</p>
+                    <p>Given the extremely limited timeframe, a full user-centered design approach was not feasible. Instead, we adopted an efficient and pragmatic methodology that prioritized:</p>
+                  </div>
+
+                  <div class="col-12 workText">
+                    <ul class="list--spaced-flat">
+                      <li><strong>Stakeholder-Driven Design</strong>  <br>  Close collaboration with Frankfurt Messe to gather essential requirements and align the solutions with their operational needs.</li>
+                      <li><strong>Heuristic &amp; Best Practices Approach</strong>  <br>  Relying on established UX/UI patterns from event management, ticketing, and networking applications to accelerate design decisions.</li>
+                      <li><strong>Rapid Prototyping &amp; Iteration</strong>  <br>  Quickly developing functional wireframes and conducting short design reviews with the client to validate concepts before finalizing designs.</li>
+                      <li><strong>Technical Feasibility-First Approach</strong>  <br>  Designing solutions that could be developed and deployed quickly within the constraints of Frankfurt Messe's infrastructure.</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>This agile approach allowed us to align the technical constraints, event logistics, and user experience goals within the short timeline.</p>
+                  </div>
+
+                  <div class="col-12 workSectionTitle">
+                    Access Control App &amp; Backend Control Platform
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>The staff-facing application was designed with a focus on speed and simplicity, ensuring quick and seamless ticket validation at event entry points. The app enabled staff to quickly scan QR codes, streamlining the process and significantly reducing wait times for attendees. The user interface of the app was kept minimal and intuitive, ensuring that even with little to no training, event staff could use the system effectively. The goal was to provide a reliable and user-friendly tool that staff could depend on, even under high-pressure conditions.</p> 
+
+                    <div class="col-12 workImgGroup">
+                      <div class="row">
+                        <div class="imageWapper">
+                          <img class="largeImage"  src="../res/Images/Frankfurt_Messe/access_control_app.png" alt="Access control app">
+                        </div>
+                        <div class="col-12 imgDescription">
+                         Staff-facing access control app: fast QR ticket validation at the gates.
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <p>To ensure smooth operations, we worked closely with the client to design the error flow and manage potential issues at the gates. Different scenarios, such as invalid tickets or system errors, were carefully mapped out to ensure staff could address problems quickly and efficiently. This process minimized disruptions and maintained a seamless experience for attendees.</p>
+                    
+                    <div class="col-12 workImgGroup">
+                      <div class="row">
+                        <div class="imageWapper">
+                          <img class="largeImage"  src="../res/Images/Frankfurt_Messe/access_flow.png" alt="Access Flow">
+                        </div>
+                        <div class="col-12 imgDescription">
+                          Staff-facing access control app: the validation flow, with the individual cases the client asked us to handle.
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <p>The app was integrated with a real-time backend platform, allowing event organizers to track attendance and manage guest entries dynamically. This integration ensured that the system could handle a large volume of entries while maintaining accurate and up-to-date data. Additionally, the backend provided valuable statistical insights, including visitor data and entry trends, which helped organizers optimize event management and track performance in real-time.</p>
+                    
+                    <div class="col-12 workImgGroup">
+                      <div class="row">
+                        <div class="imageWapper">
+                          <img src="../res/Images/Frankfurt_Messe/access_backend.png" alt="Acess Control Backend UIs">
+                        </div>
+                        <div class="col-12 imgDescription">
+                          Backend platform: access control, event data, and visitor management.
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <p>The backend platform was also developed with future events in mind. It was designed to be scalable and customizable, allowing the system to be adapted for different events and evolving client needs. This ensured that the solution could grow with the client and remain relevant for future use cases.</p>
+                  </div>
+
+                  <div class="col-12 workSectionTitle">
+                    Guest &amp; Exhibitor Application
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>The guest-exhibitor app served as a centralized platform for event attendees, designed to improve engagement and facilitate networking while ensuring compliance with COVID-19 restrictions. The app allowed both guests and exhibitors to interact seamlessly, streamlining event operations and enhancing the attendee experience.</p>
+                    <p>One of the core functionalities of the app was digital ticket management, allowing guests to access, validate, and check their event status directly on their mobile devices. This feature eliminated the need for physical ticket exchanges, reducing contact points and improving the check-in process. Additionally, the app enabled exhibitor-guest interactions, allowing guests to easily exchange contact details and company information. This made networking easier while keeping interactions touchless, which was critical due to the ongoing pandemic.</p>
+                    
+                    <div class="col-12 workImgGroup">
+                      <div class="row">
+                        <div class="imageWapper">
+                          <img src="../res/Images/Frankfurt_Messe/guest-exhibitor-flow.png" alt="Guest and exhibitor login flow">
+                        </div>
+                        <div class="col-12 imgDescription">
+                          Guest and exhibitor app: extract from the login flow.
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <p>The app also included features for event booking and scheduling, where guests could pre-book meetings with exhibitors and manage their personal event itinerary. This allowed for a smoother flow of interactions, ensuring that guests could plan their time efficiently and take full advantage of the event. On-site navigation was also integrated into the app, with an interactive map that helped attendees locate booths, event spaces, and conference sessions, ensuring that they could navigate the venue without difficulty.</p>
+                    
+                    <div class="col-12 workImgGroup">
+                      <div class="row">
+                        <div class="imageWapper">
+                          <img src="../res/Images/Frankfurt_Messe/guest-exhibitor-app.png" alt="Guest and exhibitor app UI">
+                        </div>
+                        <div class="col-12 imgDescription">
+                          Guest and exhibitor app: networking, digital tickets, and on-site navigation.
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <p>To keep attendees informed, the app included a feature for event promotion and live updates. Organizers were able to send real-time notifications about workshops, talks, and schedule changes, ensuring that guests were always up to date on important event information.</p>
+                    <p>The visual design of the app was carefully aligned with Frankfurt Messe's brand identity and communication guidelines, maintaining consistency across all digital touchpoints.</p>
+                  </div>
+
+                  <div class="col-12 workSectionTitle">
+                    Outcome &amp; Impact
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>Despite the tight three-month deadline, the project was successfully delivered and deployed before the event, ensuring smooth operations and enhanced attendee engagement. As the lead designer, I was responsible for defining the UX/UI strategy, user flows, wireframes, and high-fidelity prototypes within an extremely short timeframe. By prioritizing rapid prototyping, industry benchmarking, and close collaboration with stakeholders, I ensured that both solutions were delivered on time, met the client's expectations, and provided a functional, scalable digital experience for the event.</p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+    
+                <!-- Project prev/next navigation -->
+        <div id="projNav" class="row justify-content-between align-items-center appearAble">
+          <div class="col-6 d-flex justify-content-start">
+            <button id="projNavPrev" class="proj_nav_button hoverable" onclick="">
+              <span class="material-symbols-outlined button-icon">arrow_back</span>
+              <span class="proj_nav_label">Previous</span>
+            </button>
+          </div>
+          <div class="col-6 d-flex justify-content-end">
+            <button id="projNavNext" class="proj_nav_button hoverable" onclick="">
+              <span class="proj_nav_label">Next</span>
+              <span class="material-symbols-outlined button-icon">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="footer"  class="row justify-content-around align-items-center appearAble">
+          <div  id="footer-text" class="col-12 col-lg-10 col-xl-11">
+            <span>&copy; <span id="footerYear"></span> Andrea Picardi. Images belong to their respective owners where indicated. Background shader based on webgl-noise by Stefan Gustavson (<a href="https://github.com/stegu/webgl-noise/blob/master/LICENSE">licence</a>), modified and coded with AI.</span>
+          </div>
+          <div id="footer-actions"  class="col-12 col-lg-2 col-xl-1 d-flex justify-content-center">
+            <button class="short_button hoverable" onclick="restartALL()"><span class="material-symbols-outlined button-icon">restart_alt</span></button>
+            <button class="short_button hoverable" onclick="goOnTOP()"><span class="material-symbols-outlined button-icon">arrow_upward</span></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer Year Update-->
+  <script>document.getElementById("footerYear").textContent = new Date().getFullYear();</script>
+
+  <!-- Change colors Accent, Background and Cureves colors (needed if the user enter or reload the page)-->
+  <script  type="text/javascript">
+
+    document.querySelector(':root').style.setProperty('--main-accent-color',  'rgb(1, 92, 169)'); //change acent color of interface
+
+    document.querySelector(':root').style.setProperty('--main-bg-color',  'rgb(255,255,255)');  //change background color of interface 
+    colorBG.set(1.0,1.0,1.0); //change acent color of bacground cover
+
+    colorLINES.set(0, 0.36, 0.66); //change lines color of bacground cover
+
+  </script>
+
+  <!-- Initialized Barba.js for page translitions -->
+  <script src="../js/barbaScript.js"></script>
+
+  <!-- NO JS COVER JavaScript snippet -->
+    <script type="text/javascript">
+      document.getElementById("noJsCover").style.display="none";
+      document.getElementById("content").classList.remove("hide");
+    </script>
+    
+  </body>
+</html>

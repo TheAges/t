@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Picardi Andrea CV - Interaction Designer in Milan" />
+    <meta name="keywords" content="designer, interaction, CV, UI, UX, prototyping, user, testing," />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Picardi Andrea Portfolio</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB4PSIyNSIgeT0iMjUiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg==">
+
+    <!-- INITIALIZE JS LIBRARIES -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  
+    <!-- CSS STYLESHEETs -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap" rel="stylesheet">
+
+    <!-- MATERIAL SYMBOLS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+
+    <!-- JS SCRIPTS -->
+    <script>window.SITE_ROOT = "/portfolio-andrea-picardi/";</script>
+    <script src="../js/main.js" defer></script> <!-- <script src="js/main.js" defer></script> -->
+
+    <!-- TWEEN LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/20.0.0/tween.umd.js"></script>
+
+    <!-- THREE.JS SCRIPTS -->
+    <script src="../js/lib/three.min.js"></script>
+    <script src="../js/main_three.js"></script>
+
+    <!-- SLIDEING-SCROLL LIBRARY -->
+    <!-- <script src="js/lib/sliding-scroll.min.js"></script> -->
+
+    
+    <!-- BARBA.JS LIBRARY -->
+    <script src="../js/lib/barba.umd.js"></script>
+
+    <!-- ANIMATION LIBRARY -->
+    <script src="../js/lib/anime.min.js"></script>
+
+
+
+    <style>
+      /* NO JS Cover CSS */
+        .hide {
+          display: none !important;
+        }
+
+        @keyframes fadeInNoJS {
+          from {opacity: 0;}
+          to {opacity: 1;}
+        }
+      /* END NO JS Cover CSS */
+
+    </style>
+  </head>
+  <body>
+
+  <!-- NO JS COVER HTML -->
+
+    <div id="noJsCover" style="animation: fadeInNoJS 1s linear;">
+      <div id="noJsWrapper"   style="margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">
+        <img src="../res/Images/scribble.gif" style="display: block; margin-left: auto; margin-right: auto; width: 120px;">
+        <p style="text-align:center;">
+          This website needs JavaScript in order to work properly,<br><a href="https://www.enable-javascript.com/">Plase enable it</a> to continue with the navigation.
+        </p>
+        <p class="d-none" style="text-align:center;">
+          Otherwise you can download my complete portfolio <a href="../res/Picardi_Andrea_Portfolio_It.pdf">here</a>
+        </p>
+      </div>
+    </div>
+
+  <!-- END NO JS COVER HTML -->
+
+  <!-- 
+  <!-- LOADING COVER HTML ->
+
+  <div id="loading-warning-wrapper"  class=" d-none row vh-100 align-items-center justify-content-center">
+    <div id="loading-warning" class="col-4">
+      <div class="row align-items-center justify-content-center">
+        <span>
+          <img src="../res/Images/loading.gif" width="40px" alt="">
+          <br>
+          <br>
+          <span class="align-middle"> LOADING </span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- END LOADING COVER HTML -->
+
+  <!-- LOADING COVER JavaScript snippet ->
+
+    <script type="text/javascript">
+      let loadingWarning = setTimeout(() => { document.getElementById("loading-warning-wrapper").classList.remove("d-none"); }, 3000);
+    </script>
+
+  <!-- LOADING COVER JavaScript snippet ->
+  -->
+
+  <div id="contacts-wrapper" class="d-none">
+    <div class="container">
+      <div class="row align-items-center justify-content-center vh-100">
+        <div id="contacts-background" onclick="toggleContacts()"></div>
+        <div id="contacts-panel" class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
+          <div class="row">
+            <div class="d-flex justify-content-between">
+              <span id="contacts_header">Let's continue the conversation. Find me at:</span><button class="short_button hoverable" onclick="toggleContacts()"><span class="material-symbols-outlined button-icon">close</span></button>
+            </div>
+          </div>
+          <div class="row">
+            <address id="contacts" class="text">
+              <ul id="contactsList">
+                <!--
+                <li>&nbsp;</li>
+                <li class="contactsElement"><a href="tel:(+xx) xxx.xxx.xxxx"><svg class="ContactsIcons" src="../res/icons/IconaCELL.svg" alt="cellphone link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850.39 850.39"><title>IconaTELE</title><path d="M425.2,0C190.37,0,0,190.37,0,425.2S190.37,850.39,425.2,850.39,850.39,660,850.39,425.2,660,0,425.2,0ZM614.76,591.7c-5.25,4.91-10.94,9.38-16,14.48C568.27,636.91,530.5,645.41,489,641.91c-29.39-2.47-55.84-14.09-80.16-29.8C335.59,564.79,279.5,501.87,241.59,423.19c-12.38-25.69-19-53.05-19-86.63.71-30.16,9.44-62.51,32.62-89.63,11.19-13.09,24.92-23.62,38.72-33.74,11.49-8.42,25-8.41,35.44,1,26.2,23.53,45.25,52.24,53.67,86.73,3.54,14.52-1.43,28-13.45,37.95-8.52,7.05-17.19,13.93-25.82,20.86-15.81,12.68-19.71,25.05-14.05,44.64A94.83,94.83,0,0,0,340,427a310.67,310.67,0,0,0,78.82,87.81c3.08,2.33,6.27,4.56,9.56,6.59,21.62,13.34,37.9,11.42,55.89-6.6,5.08-5.09,9.81-10.54,15-15.51,16.7-16,37.14-19.71,57.09-8.07a240.78,240.78,0,0,1,62.82,53.61C632.89,561.15,630.53,576.93,614.76,591.7Z"/></svg><span>(+39) 348.0373502 &nbsp;</span></a></li>
+                <li class="contactsElement"><a href="mailto:picardi.andrea@virgilio.it"><svg class="ContactsIcons" src="../res/icons/IconaEMAIL.svg" alt="email link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 849.22 849.22"><title>IconaEMAIL</title><path d="M429.5,342.26c-49.14,1.54-91.6,44.25-92.92,93.47-1,37.53,22,65.65,58.92,72.15,47.29,8.32,97.2-29.81,106.51-81.38C510.43,379.81,476.85,340.78,429.5,342.26Z" transform="translate(-1.17 -1.01)"/><path d="M425.78,1C191.28,1,1.17,191.12,1.17,425.62S191.28,850.23,425.78,850.23s424.61-190.1,424.61-424.61S660.29,1,425.78,1ZM671,552.16c-17.94,36-47.6,55.16-87.41,54.32-40.41-.85-70.14-21.29-86.06-58.85-4.84-11.42-7.59-13-19-6.56C409.33,580.47,329,559,296.7,493.46c-33.88-68.84,3.32-160.07,79.49-191.64,48.68-20.17,95.44-16.33,137.7,17.84,3.27,2.65,5.33,3.58,11.29,2.29,15.18-3.28,30.8,3.31,46,6.86,6.36,1.49,2.16,8.62,1.37,12.91q-13.75,74.38-28,148.66c-2.24,11.79-4.43,23.58-.19,35.34,6,16.64,22.18,28.88,39.75,28.83,19.22-.06,33-9.58,40.86-27.09,37.82-84,29.26-163.38-27.67-235.35C536,214.7,432.06,189.33,341.55,226.56,252.63,263.13,196.39,355,204.8,449.87A222.5,222.5,0,0,0,381.32,648.49a183.38,183.38,0,0,0,33.88,4.07c8.84.18,11.3,3.37,10.68,11.56-.57,7.56-1.06,15.34.08,22.76,2.6,17-5.25,19.12-20,18C267.77,694.23,156.15,579.2,152.26,442.72c-4.08-143.41,97.52-264,237.84-282.29,164-21.39,309.35,105.9,309.32,287.62C699.28,473.81,689.91,514.15,671,552.16Z" transform="translate(-1.17 -1.01)"/></svg><span>picardi.andrea@virgilio.it &nbsp;</span></a></li>
+                <li class="contactsElementSeparator"></li>
+                -->
+                <li class="contactsElement"><a href="https://www.linkedin.com/in/Andrea-Picardi"><svg class="ContactsIcons" src="../res/icons/In_LOGO.svg" alt="LinkedIn link" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 396 395.9" xml:space="preserve"> <path d="M0,0v395.9H396V0H0z M117.6,334.9c0,1.8-0.3,2.6-2.4,2.6c-18.1,0-36.2,0-54.3,0h-2.3l0,0V150.8c0-2.8,0-2.8,2.9-2.8h53.4 c2.8,0,2.8,0,2.8,2.8C117.5,212.2,117.5,273.5,117.6,334.9z M88,122.8c-0.3,0-0.6,0-0.8,0c-18.7-0.3-33.7-15.7-33.4-34.4 C53.5,69.8,69.3,54,88,54.1c0.1,0,0.1,0,0.2,0c18.9,0,34.3,15.4,34.2,34.4C122.3,107.8,107.5,122.7,88,122.8z M337.9,334.9v2.5 l-0.1,0.1h-56.7c-2.7,0-2.7,0-2.7-2.6c0-33.8,0-67.7-0.1-101.6c0.1-7.6-1.3-15.2-4.2-22.3c-4.1-9.2-11.2-14.1-21.2-15.2 c-5.7-0.7-11.5-0.2-17,1.4c-9.6,2.8-15.7,9.3-19,18.6c-2.3,6.2-3.5,12.7-3.5,19.3c-0.1,33.2-0.3,66.4-0.4,99.6c0,2.9,0,2.9-2.8,2.9 c-17.9,0-35.8-0.1-53.7,0c-1.9,0-2.6-0.5-2.6-2.5c0-61.5,0-123,0-184.5c0-2.5,0.1-2.5,2.5-2.5H208c2.6,0,2.6,0,2.6,2.7V172 c0,0.6,0.1,1.3,0.1,2l0.5,0.1c0.5-0.8,0.9-1.6,1.4-2.4c8.3-12.8,19.9-21.1,34.5-25.4c5.8-1.7,11.7-2.6,17.7-2.7 c11.4-0.3,22.5,0.9,33.3,4.7c11.7,4,21.6,12.2,27.8,22.9c5.2,8.8,8,18.4,9.6,28.4c1.1,6.2,1.7,12.4,1.9,18.7 c0.3,26.6,0.4,53.3,0.5,79.9C337.9,310.5,337.9,322.8,337.9,334.9z"/></svg><span>www.linkedin.com/in/Andrea-Picardi &nbsp;</span></a></li>
+                <li class="contactsElement"><a href="https://www.researchgate.net/profile/Andrea-Picardi"><svg class="ContactsIcons" src="../res/icons/Re_LOGO.svg" alt="ResearchGate link"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" xml:space="preserve"> <path d="M0,0v32h32V0H0z M22.1,28.6c-0.3,0.4-1.5,0.5-3,0.2c-2.3-0.4-3.7-1.8-7.1-6.9c-1.2-1.7-1.2-1.7-2.3-1.8	c-1.7-0.1-1.5-0.4-1.5,3.2c0.1,4.1,0,4,2.4,4.4c0.6,0.1,0.7,0.1,0.7,0.5c0,0.4,0,0.4-4.2,0.4c-3.9,0-4.2,0-4.3-0.2 c-0.2-0.5,0.1-0.7,0.9-0.8c1-0.2,1.5-0.6,1.6-1.3c0.1-0.3,0.1-3.7,0-7.7c0-8.3,0-7.9-1.5-8.2c-1-0.2-1.3-0.4-1.1-0.8	C2.8,9.4,3,9.4,7.4,9.3c6.5-0.1,7.7,0.1,9.5,1.6c1.8,1.6,2.1,4.1,0.6,6.2c-0.6,0.9-1.9,1.9-2.9,2.3c-0.5,0.2-0.8,0.4-0.8,0.4 c0,0.2,1.5,2.3,2.4,3.4c2.4,3,3.8,4.1,5.1,4.5C22.1,28,22.3,28.2,22.1,28.6z M29.3,9.5c-0.1,2.1-0.7,3.2-2.1,3.8	c-0.9,0.4-2.2,0.5-3.1,0.4c-2.5-0.5-3.3-2-3.2-5.9c0.1-2.2,0.2-2.8,1.1-3.7c1.5-1.6,5.1-1.4,6.5,0.3c0.6,0.7,0.5,0.9-0.3,1.2 c-0.6,0.2-0.6,0.2-1.2-0.4c-1.4-1.3-3.7-0.8-4.1,0.9c-0.2,0.8-0.2,3.9,0,4.7c0.6,2,3.9,2,4.5,0c0.4-1.3,0.3-1.4-1.3-1.5 c-0.8,0-0.8,0-0.8-0.7c0-0.6,0-0.6,1.8-0.7C29.4,7.9,29.4,7.8,29.3,9.5z"/>	<path d="M13.3,11.2c-0.8-0.3-1-0.4-3-0.4c-2.1,0-2.1,0-2.2,3.7c0,2,0,3.8,0,3.9c0.1,0.3,3.8,0.2,4.7-0.2 C16.1,16.9,16.3,12.5,13.3,11.2z"/></svg><span>www.researchgate.net/profile/Andrea-Picardi &nbsp;</span></a></li>
+                <li class="contactsElement"><a href="https://www.github.com/TheAges"><svg class="ContactsIcons" src="../res/icons/GitLab_LOGO.svg" alt="GitHab link" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 396 396" xml:space="preserve"> <path d="M0,0v396h396V0H0z M244.5,344.4c-7.7,1.5-10.3-3.3-10.3-7.3c0-5.1,0.4-21.3,0.4-41.4c0-13.9-4.8-23.1-10.3-27.9 c33.7-3.7,68.9-16.5,68.9-74.4c0.2-15-5.3-29.6-15.4-40.7c1.5-3.7,7-19.1-1.5-40c0,0-12.4-4-41.4,15.4c-24.7-6.9-50.8-6.9-75.5-0.1 c-28.6-19.4-41.4-15.4-41.4-15.4c-8.1,20.9-2.9,36.3-1.5,40c-10.1,11.1-15.6,25.7-15.4,40.7c0,57.9,35.6,71.1,68.9,74.8 c-4.4,3.7-8.1,10.3-9.5,20.2c-8.8,4-30.4,10.6-44-12.5c0,0-8.1-14.3-23.1-15.4c0,0-14.7-0.4-1.1,9.2c0,0,9.9,4.4,16.9,22 c0,0,8.8,27.2,51,18c0.4,12.8,0.4,24.6,0.4,28.2c0,4-2.6,8.8-10.3,7.3C90.2,324.9,46.9,268.4,46.9,201.7 c0-83.4,67.6-151.1,151.1-151.1c83.2,0,151.1,67.8,150,150.3C348,267.7,304.7,324.1,244.5,344.4z"/></svg><span>www.github.com/TheAges &nbsp;</span></a></li>
+              </ul>
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="background-canvas"></div>
+
+  <div id="main" class="container d-none">
+
+    <div id="first-section"  class="row vh-100 align-items-center hide">
+      <div class=" col-12  col-sm-12 col-md-12 col-lg-8 col-xl-7">
+        <div id="cover" >
+          <p id="paragrapghTop" class="with-backcover">In today's ever-changing technological landscape, where themes like Artificial Intelligence Systems, Asset Digitalisation, and Virtual and Simulated Worlds are the driving forces, the conversation between people and the tools we design matters more than ever.</p>
+          <p id="first-divider">&#13 &#13</p>
+          <p id="paragrapghBottom" class="with-backcover">Hi, I'm Andrea, an HMI Specialist and Interaction Designer looking to map, understand, and make this conversation possible.</p>
+            
+          <div id="cursor" class="d-none">&#9608</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="second-section" class="row"> <!-- class="row min-vh-100 align-items-center" -->
+      <div class="col-12">
+
+        <div id="topBar-Wrapper" class="">
+          <div  class="row sticky-top align-items-baseline justify-content-end">
+            <div id="nav-menu" class="col-12 col-lg-3 order-1 order-lg-2 appearAble">
+              <div id="nav-menu-BG"></div>
+              <div class="row">
+                <div id="homeMenuButton-works"  class="col-auto">
+                  <a onclick="goToHomepage()"> <!--</a>href="../index.html"-->
+                    <div class="nav-menu-item hoverable" >
+                      <span class="material-symbols-outlined button-icon">home</span>
+                    </div>
+                  </a>
+                </div>
+                <div id="homeMenuButton-about"  class="col">
+                  <a onclick="goToHomepage()"> <!--</a>href="../index.html"-->
+                    <div class="nav-menu-item hoverable" >
+                      <span>Home</span>
+                    </div>
+                  </a>
+                </div>
+                <div id="aboutMenuButton" class="col">
+                  <a onclick="goToAboutpage()">  <!--href="about.html"-->
+                    <div class="nav-menu-item hoverable" >
+                      <span>About Me</span>
+                    </div>
+                  </a>
+                </div>
+                <div id="contactsMenuButton"  class="col">
+                  <a onclick="toggleContacts()">
+                    <div class="nav-menu-item hoverable">
+                      <span>Contact</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="content" data-barba="wrapper" class="hide">
+          <div id="belowTopbar-Wrapper" class="barbaContent" data-barba="container" data-barba-namespace="homepage" data-work-key="AI_Discharge">
+            
+          <div id="firstParagraph" class="row align-items-baseline">
+            <div class="col-12 col-lg-8 order-2 order-lg-1 with-backcover">
+              <p id="workTitle">In the Loop, Designing Trustworthy AI for Clinical Discharge</p>
+
+              <div id="work_informations">
+
+                <div id="works_info_underdescription_row" class="row align-items-baseline work_info_row">
+                  <div class="col-12">
+                    <div class="work_info_underdescription"> Envisioning a human-in-the-loop AI assistant that helps hospital doctors produce clear, reliable discharge summaries, while keeping the clinician in control. </div>
+                  </div>
+                </div>
+
+                <div id="works_info_image" class="row align-items-baseline work_info_row">
+                  <div class="col-12">
+                    <div class="imageWapper">
+                      <img src="../res/Images/AIMediDischargeTool/doctor.png" Title="Image credit to Nappy Studio" alt="Intro image - doctor with notes and tablet">
+                    </div>
+                  </div>
+                </div>
+
+                <div id="works_info_client+year+cat_row" class="row align-items-baseline work_info_row">
+
+                  <div class="col-12 col-md-4">
+                    <div id="client+year_inner_row" class="row align-items-baseline work_info_inner_row">
+
+                      <div class="col-6 col-md-12">
+                        <div class="work_info_header work_info_underline"> Context </div>
+                        <div class="work_info_text" style="text-align: left;"> <span class="nb">HCI 4 AI course,</span> <span class="nb"> Politecnico di Milano </span></div>
+                      </div>
+
+                      <div class="col-6 col-md-12">
+                        <div class="work_info_header work_info_underline"> Year </div>
+                        <div class="work_info_text"> 2025 </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-8">
+                    <div class="work_info_header work_info_underline"> Categories </div>
+                    <div id="tag_container" >
+                      <span class="work_info_tag">Human-AI&emsp13;Interaction</span>
+                      <span class="work_info_tag">Human-in-the-Loop</span>
+                      <span class="work_info_tag">Interaction&emsp13;Design</span>
+                      <span class="work_info_tag">UX&emsp13;Research</span>
+                      <span class="work_info_tag">Healthcare</span>
+                      <span class="work_info_tag">Workflow&emsp13;Design</span>
+                      <span class="work_info_tag">Trust&emsp13;&amp;&emsp13;Transparency</span>
+                      <span class="work_info_tag">Wireflows</span>
+                      <span class="work_info_tag">Prototyping</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="works_info_brief_row" class="row align-items-baseline work_info_row">
+                  <div class="col-12">
+                    <div class="work_info_header work_info_underline">Brief</div>
+                    <div class="work_info_text"> Hospital discharge is one of the most documentation-heavy moments in a patient&#x2019;s care, and one of the most error-prone. A doctor has to gather scattered clinical data, reconcile terminology written by many different practitioners across a hospital stay, and turn it into a discharge summary that a general practitioner and a patient can actually understand, all under time pressure, in a high-stakes, safety-critical context. This project explored how a tool could support that task without taking it over. Working as the sole designer alongside a team of engineers who assessed the technical feasibility, I designed a chat-and-document interaction in which the assistant retrieves, reconciles, and drafts, while the doctor stays the decision-maker at every step. The result, known within the team as MediSage, is a concept for a human-in-the-loop assistant where AI augments the clinician&#x2019;s work instead of replacing their judgment. </div>
+                  </div>
+                </div>
+
+                <div id="works_info_roles_w_team_row_4th" class="row align-items-baseline work_info_row">
+
+                  <div class="col-12 col-sm-6">
+                    <div class="work_info_header work_info_underline">Role(s)</div>
+                    <ul id="rolesList">
+                      <li>Sole Designer</li>
+                      <li>UX Researcher</li>
+                      <li>Interaction Designer</li>
+                      <li>Prototyper</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-12 col-sm-6">
+                    <div class="work_info_header work_info_underline">Team</div>
+                    <ul id="teamList">
+                      <li>Andrea Picardi</li>
+                      <li>Michele Ronchi</li>
+                      <li>Tomas Antonio Lopez</li>
+                      <li>Elibertoandrea Franchi</li>
+                    </ul>
+                  </div>
+
+                </div>
+
+                <div id="works_info_external_row" class="row align-items-baseline work_info_row">
+                  <div class="col-12">
+                    <div class="work_info_header work_info_underline">Exteral Links</div>
+                    <ul id="linkList">
+                      <li>Project report available on request</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div  id="pageWork" class="row">
+            <div class="col-12 col-lg-8">
+              <div class="row with-backcover">
+
+                <div>
+
+                  <!-- THE CHALLENGE -->
+                  <div class="col-12 workSectionTitle">
+                    The challenge
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>This started as a one-week concept workshop inside the HCI 4 AI course, which asked what could realistically be done with AI inside a real clinical workflow.</p>
+                  </div>
+
+                  <div class="col-12 workImgGroup">
+                    <div class="row">
+                      <div class="imageWapper">
+                        <img src="../res/Images/AIMediDischargeTool/EmpathyMap.png" alt="Empathy map for Lino, the cardiologist persona">
+                      </div>
+                      <div class="col-12 col-md-6 imgDescription">
+                        Empathy map used in the early phase to make sense of the user.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>We began making sense of the user with an empathy map, then consolidated it into a persona: Lino Ricci, a 45-year-old cardiologist in a busy hospital. With no time to interview real clinicians, this was a deliberate working hypothesis rather than validated research, grounded in the firsthand experience of team members who work with practitioners directly, including biotechnology PhDs whose research puts them alongside clinicians, and supported by the literature on physician burnout and documentation load. It gave us a sharp, consistent person to design against. Lino spends too much of his day on paperwork instead of patients. He struggles to coordinate with external doctors, who frequently misread or misinterpret his notes. The tools around him, digital and paper, are fragmented and do not communicate. And underneath all of it, three insights shaped every later design decision: he wants to stay in control of his tools, he is skeptical of digital solutions because he fears they will disrupt his workflow, and he works in a time-sensitive, high-stakes environment where accuracy cannot be traded for speed.</p>
+                  </div>
+
+                  <div class="col-12 workImgGroup">
+                    <div class="row">
+                      <div class="imageWapper">
+                        <img src="../res/Images/AIMediDischargeTool/Personas.png" alt="Persona: Lino Ricci, cardiologist">
+                      </div>
+                      <div class="col-12 col-md-6 imgDescription">
+                        Persona &mdash; Lino Ricci, cardiologist.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>A specific, concrete problem sat at the center of the discharge task. Over a single hospital stay, many practitioners describe the same clinical reality in different words. By the time the discharge summary is written, that inconsistent terminology has to be collected, reconciled, and translated into something unambiguous for whoever reads it next. This was the problem the tool was built to attack.</p>
+                  </div>
+
+                  <!-- MAPPING THE ECOSYSTEM -->
+                  <div class="col-12 workSectionTitle">
+                    Mapping the ecosystem
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>Before designing anything, we mapped the stakeholder ecosystem around the discharge document. Although the tool itself would be used by one person, that document travels through a dense, regulated network: hospital care teams, external specialists and GPs, labs, pharmacists, national EHR services, insurers, and the data-protection and regulatory authorities (GDPR and DPO, national health-service and regulatory bodies) that govern it. Mapping primary, secondary, and tertiary stakeholders made the constraints explicit. This is data that must be accurate, traceable, and compliant, which reinforced why the human had to stay accountable for whatever the AI produced.</p>
+                  </div>
+
+                  <div class="col-12 workImgGroup">
+                    <div class="row">
+                      <div class="imageWapper">
+                        <img class="largeImage" src="../res/Images/AIMediDischargeTool/StakeholderMap.png" alt="Stakeholder map of the discharge-document ecosystem">
+                      </div>
+                      <div class="col-12 imgDescription">
+                        Stakeholder map &mdash; primary, secondary and tertiary actors around the discharge document.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- THE INTERACTION MODEL -->
+                  <div class="col-12 workSectionTitle">
+                    The interaction model
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>The core decision was to keep the human in the loop by design, not as a safety afterthought, but because the user model pointed to trust and control as prerequisites for adoption. The assistant does the heavy lifting of retrieval, reconciliation, and drafting. The doctor verifies, edits, and approves. Two back-end principles anchored this: the system always treats the EHR and the doctor&#x2019;s own input as the ground truth, and it always lets the doctor override or modify any automated decision, regenerating the affected parts on demand.</p>
+                    <p>The interface is built around two synchronized panels. A guided chat on the left leads the doctor through the task step by step, and the live discharge document on the right updates as they go. Selecting a patient is its own first screen, with sorting, a card or table toggle, and search by name or record code, so the doctor leans on recognition rather than recall and the tool feels like the hospital systems they already know. The split keeps the conversation and its product visible at the same time, so the doctor always sees what the assistant is doing to the document, never just a black-box result.</p>
+                  </div>
+
+                  <div class="col-12 workImgGroup">
+                    <div class="row">
+                      <div class="col-12 col-md-6">
+                        <div class="imageWapper">
+                        <img src="../res/Images/AIMediDischargeTool/ui_1.png" alt="Interface Mockup">
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div class="imageWapper">
+                        <img src="../res/Images/AIMediDischargeTool/ui_2.png" alt="Interface Mockup">
+                        </div>
+                      </div>
+                      <div class="col-12 imgDescription">
+                        Interface Mockup.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 workSectionTitle">
+                    A provenance and confidence layer
+                  </div>
+                  <div class="col-12 workText">
+                    <p>The most important interaction detail is how the document shows where each piece of data came from and how certain the system is about it. The text is colour-coded so the doctor can aim their attention:</p>
+                    <ul class="list--spaced-flat list--no-style">
+                      <li><span class="colourSwatch" style="background:#3b82f6;"></span><strong>Blue:</strong> fixed, structured data edited through input wizards (for example dates or formats).</li>
+                      <li><span class="colourSwatch" style="background:#ef4444;"></span><strong>Red:</strong> no match found in the database, so the field needs the doctor&#x2019;s verification.</li>
+                      <li><span class="colourSwatch" style="background:#f59e0b;"></span><strong>Orange:</strong> a partial match was found, suggested but not yet confirmed.</li>
+                      <li><span class="colourSwatch" style="background:#facc15;"></span><strong>Yellow:</strong> several candidate terms were found, and the doctor picks the right one from a dropdown.</li>
+                      <li><span class="colourSwatch" style="background:#8b5cf6;"></span><strong>Purple:</strong> text written or rewritten by the language model, flagged for review.</li>
+                    </ul>
+                    <p>Behind the scenes, the medical terms are matched against a standardized vocabulary so the same clinical reality is always written the same way. The colours are how that matching becomes visible and reviewable. Rather than asking the doctor to accept an opaque draft, the system makes its confidence and its authorship legible at a glance, so review effort goes where the uncertainty is. And every field stays freely editable. The assistant proposes, the doctor disposes. That is the override mechanism, available everywhere, at all times.</p>
+                  </div>
+
+                  <!-- BUILT ON VERIFIED TECHNICAL FEASIBILITY -->
+                  <div class="col-12 workSectionTitle">
+                    Built on verified technical feasibility
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>A concept is only worth designing if the back-end can support it, and a significant part of the team&#x2019;s work was dedicated to verifying exactly that. The assistant relies on the ChatGPT API for the conversational drafting and on the OMOP Common Data Model (version 5.4) for the medical vocabulary, an ontology that bundles widely used standards such as SNOMED-CT and ICD-10 so the chosen terms stay interoperable across hospitals and specialists. To match a doctor&#x2019;s free-text wording to a standard concept, the working prototype used PostgreSQL full-text search, with a vector database of concept embeddings identified as the more semantically accurate approach for future development.</p>
+                    <p>That technical groundwork directly shaped the design. Knowing what the system could reliably do, and where it needed human input to compensate, is what justified the interaction choices: the provenance colours are the human-facing expression of that pipeline, surfacing the system&#x2019;s confidence at each field so the doctor can calibrate their trust and focus their attention where it matters.</p>
+                  </div>
+
+                  <!-- THE FLOW, END TO END -->
+                  <div class="col-12 workSectionTitle">
+                    The flow, end to end
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>The full workflow is a back-and-forth: the assistant proposes at each step, the doctor reviews and confirms before moving on. From patient selection to final export, it runs as follows:</p>
+                    <ol class="list--spaced-numbered">
+                      <li><strong>Initiation:</strong> Lino opens his list of patients and selects one. The assistant pulls that patient&#x2019;s records from the EHR service.</li>
+                      <li><strong>Drafting and standardization:</strong> From the retrieved data the assistant generates a first structured summary, isolates the medical terms, looks each one up against the OMOP vocabulary, and proposes standardized replacements in context. On the right, the colour-coded document shows what matched cleanly, what was partial, what had several candidates, and what is missing.</li>
+                      <li><strong>Guided verification:</strong> The chat walks Lino through checking the data. He confirms, corrects, or picks the right term from a dropdown, and edits anything freely.</li>
+                      <li><strong>Co-writing the summary:</strong> The chat asks for the discharge notes and the ongoing care plan. Lino writes them in his own words. The assistant reformats and completes them on the right, filling the missing parts of the blueprint and marking everything it authored in purple. This hand-off repeats for a few turns until the summary is whole.</li>
+                      <li><strong>Output:</strong> The finished document can be downloaded as a PDF or submitted to the national health record system. Because the workflow is non-linear, Lino can step back to any point in the chat to fix an inaccuracy or a hallucination without restarting.</li>
+                    </ol>
+                  <div class="col-12 workImgGroup">
+                    <div class="row">
+                      <div class="imageWapper">
+                        <video  class="spreadImage" controls autoplay alt="Key mockup screens of the discharge flow">
+                          <source src="../res/Images/AIMediDischargeTool/flow.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <div class="col-12 col-md-6 imgDescription">
+                        Key screens from the prototype flow.
+                      </div>
+                    </div>
+                  </div>
+
+                    <p>Read against the vocabulary of human-agent interaction, the model covers the full set: initiation (selecting a patient triggers retrieval), guidance (the step-by-step chat), feedback (the provenance colours and the purple authorship marks), handover (the turn-taking between doctor and assistant), override (every field editable, every step revisitable), and failure handling (the red state when the database has no answer).</p>
+                  </div>                 
+
+                  <div class="col-12 workImgGroup">
+                    <div class="row">
+                      <div class="imageWapper">
+                        <img src="../res/Images/AIMediDischargeTool/Wireflow.png" alt="Wireflow of the discharge tool">
+                      </div>
+                      <div class="col-12 col-md-6 imgDescription">
+                        Wireflow of the end-to-end interaction.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- WHAT THE PROJECT DEMONSTRATES -->
+                  <div class="col-12 workSectionTitle">
+                    Future directions and open questions 
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>Faced with a skeptical, high-stakes user who needed to stay in control, the proposed design keeps the human as the decision-maker by intent: the assistant retrieves, reconciles, and drafts, while the doctor verifies, edits, and approves at every step. The provenance colour system is the clearest expression of that stance. Instead of asking a clinician to trust an opaque draft, it makes the source and the confidence of every field legible, so trust is earned field by field and review effort goes where the uncertainty actually is. Override stays available everywhere, the workflow forgives mistakes, and the system surfaces its uncertainty rather than hiding it. Together these are the foundations of a human-agent model that could grow more autonomous without ever taking the human out of the loop.</p>
+                    <p>The tool was built as the design groundwork for a study that would put these trust mechanisms in front of real clinicians, the qualitative validation the assumption-based persona calls for. But the idea it sets out stands on its own: in safety-critical work, AI earns its place not by doing more on its own, but by being transparent enough that the expert can confidently rely on it.</p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+    
+                <!-- Project prev/next navigation -->
+        <div id="projNav" class="row justify-content-between align-items-center appearAble">
+          <div class="col-6 d-flex justify-content-start">
+            <button id="projNavPrev" class="proj_nav_button hoverable" onclick="">
+              <span class="material-symbols-outlined button-icon">arrow_back</span>
+              <span class="proj_nav_label">Previous</span>
+            </button>
+          </div>
+          <div class="col-6 d-flex justify-content-end">
+            <button id="projNavNext" class="proj_nav_button hoverable" onclick="">
+              <span class="proj_nav_label">Next</span>
+              <span class="material-symbols-outlined button-icon">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="footer"  class="row justify-content-around align-items-center appearAble">
+          <div  id="footer-text" class="col-12 col-lg-10 col-xl-11">
+            <span>&copy; <span id="footerYear"></span> Andrea Picardi. Images belong to their respective owners where indicated. Background shader based on webgl-noise by Stefan Gustavson (<a href="https://github.com/stegu/webgl-noise/blob/master/LICENSE">licence</a>), modified and coded with AI.</span>
+          </div>
+          <div id="footer-actions"  class="col-12 col-lg-2 col-xl-1 d-flex justify-content-center">
+            <button class="short_button hoverable" onclick="restartALL()"><span class="material-symbols-outlined button-icon">restart_alt</span></button>
+            <button class="short_button hoverable" onclick="goOnTOP()"><span class="material-symbols-outlined button-icon">arrow_upward</span></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer Year Update-->
+  <script>document.getElementById("footerYear").textContent = new Date().getFullYear();</script>
+
+
+  <!-- Change colors Accent, Background and Cureves colors (needed if the user enter or reload the page)-->
+  <script  type="text/javascript">
+
+    document.querySelector(':root').style.setProperty('--main-accent-color',  'rgb(31,137,219)'); //change acent color of interface
+
+    document.querySelector(':root').style.setProperty('--main-bg-color',  'rgb(255,255,255)');  //change background color of interface 
+    colorBG.set(1.0,1.0,1.0); //change acent color of bacground cover
+
+    colorLINES.set(0.12,0.54,0.86); //change lines color of bacground cover
+
+  </script>
+
+  <!-- Initialized Barba.js for page translitions -->
+  <script src="../js/barbaScript.js"></script>
+
+  <!-- NO JS COVER JavaScript snippet -->
+    <script type="text/javascript">
+      document.getElementById("noJsCover").style.display="none";
+      document.getElementById("content").classList.remove("hide");
+    </script>
+    
+  </body>
+</html>

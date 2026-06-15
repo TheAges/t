@@ -1,0 +1,55 @@
+//barba.use(barbaCss);
+
+  barba.init({
+    preventRunning: true,
+
+    transitions: [{
+      name: 'fade-transition',
+      beforeLeave(data) {
+        const done = this.async();
+
+        data.current.container.style.opacity = "1";
+        //data.current.container.style.background = "#00000000"; 
+        //data.current.container.style.transform = "translate(0px,0px)"
+
+        window.scrollTo({top: window.innerHeight, left: 0, behavior: "smooth"});
+
+        setTimeout(function () {done();}, 0);
+      },
+      leave(data) {
+        const done = this.async();
+
+        data.current.container.style.opacity = "0";
+        //data.current.container.style.background = "#000000FF"; 
+        //data.current.container.style.transform = "translate(" + window.innerWidth + "px,0px)"
+
+        setTimeout(function () {done();}, 1000);
+      },
+      afterLeave(data) {
+        data.current.container.classList.add("hide");
+        
+        if (window.location.pathname.split("/").pop() == "index.html") {document.getElementById("first-section").classList.remove("hide");}
+        else {document.getElementById("first-section").classList.add("hide");}
+      }, 
+      beforeEnter(data) {
+        const done = this.async();
+
+        if (window.location.pathname.split("/").pop() == "index.html") {loadWorks();}
+        window.scrollTo({top: window.innerHeight, left: 0, behavior: "instant"});
+
+        data.next.container.style.opacity = "0";
+        //data.next.container.style.transform = "translate(" + -window.innerWidth + "px,0px)"
+
+        setTimeout(function () {done();}, 0);
+      },
+      enter(data) {
+        const done = this.async();
+
+        data.next.container.style.opacity = "1";
+        //data.next.container.style.transform = "translate(0px,0px)"
+        
+        setTimeout(function () {done();}, 200);
+      },
+      afterEnter(data) {}
+    }]
+  });

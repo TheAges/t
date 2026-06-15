@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Picardi Andrea CV - Interaction Designer in Milan" />
+    <meta name="keywords" content="designer, interaction, CV, UI, UX, prototyping, user, testing," />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Picardi Andrea Portfolio</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB4PSIyNSIgeT0iMjUiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzAwMDAwMCIvPjwvc3ZnPg==">
+
+    <!-- INITIALIZE JS LIBRARIES -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  
+    <!-- CSS STYLESHEETs -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap" rel="stylesheet">
+
+    <!-- MATERIAL SYMBOLS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+
+    <!-- JS SCRIPTS -->
+    <script>window.SITE_ROOT = "/portfolio-andrea-picardi/";</script>
+    <script src="../js/main.js" defer></script> <!-- <script src="js/main.js" defer></script> -->
+
+    <!-- TWEEN LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/20.0.0/tween.umd.js"></script>
+
+    <!-- THREE.JS SCRIPTS -->
+    <script src="../js/lib/three.min.js"></script>
+    <script src="../js/main_three.js"></script>
+
+    <!-- SLIDEING-SCROLL LIBRARY -->
+    <!-- <script src="js/lib/sliding-scroll.min.js"></script> -->
+
+    
+    <!-- BARBA.JS LIBRARY -->
+    <script src="../js/lib/barba.umd.js"></script>
+
+    <!-- ANIMATION LIBRARY -->
+    <script src="../js/lib/anime.min.js"></script>
+
+
+
+    <style>
+      /* NO JS Cover CSS */
+        .hide {
+          display: none !important;
+        }
+
+        @keyframes fadeInNoJS {
+          from {opacity: 0;}
+          to {opacity: 1;}
+        }
+      /* END NO JS Cover CSS */
+    </style>
+  </head>
+  <body>
+
+  <!-- NO JS COVER HTML -->
+
+    <div id="noJsCover" style="animation: fadeInNoJS 1s linear;">
+      <div id="noJsWrapper"   style="margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">
+        <img src="../res/Images/scribble.gif" style="display: block; margin-left: auto; margin-right: auto; width: 120px;">
+        <p style="text-align:center;">
+          This website needs JavaScript in order to work properly,<br><a href="https://www.enable-javascript.com/">Plase enable it</a> to continue with the navigation.
+        </p>
+        <p class="d-none" style="text-align:center;">
+          Otherwise you can download my complete portfolio <a href="../res/Picardi_Andrea_Portfolio_It.pdf">here</a>
+        </p>
+      </div>
+    </div>
+
+  <!-- END NO JS COVER HTML -->
+
+  <!-- 
+  <!-- LOADING COVER HTML ->
+
+  <div id="loading-warning-wrapper"  class=" d-none row vh-100 align-items-center justify-content-center">
+    <div id="loading-warning" class="col-4">
+      <div class="row align-items-center justify-content-center">
+        <span>
+          <img src="../res/Images/loading.gif" width="40px" alt="">
+          <br>
+          <br>
+          <span class="align-middle"> LOADING </span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- END LOADING COVER HTML -->
+
+  <!-- LOADING COVER JavaScript snippet ->
+
+    <script type="text/javascript">
+      let loadingWarning = setTimeout(() => { document.getElementById("loading-warning-wrapper").classList.remove("d-none"); }, 3000);
+    </script>
+
+  <!-- LOADING COVER JavaScript snippet ->
+  -->
+
+  <div id="contacts-wrapper" class="d-none">
+    <div class="container">
+      <div class="row align-items-center justify-content-center vh-100">
+        <div id="contacts-background" onclick="toggleContacts()"></div>
+        <div id="contacts-panel" class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
+          <div class="row">
+            <div class="d-flex justify-content-between">
+              <span id="contacts_header">Let's continue the conversation. Find me at:</span><button class="short_button hoverable" onclick="toggleContacts()"><span class="material-symbols-outlined button-icon">close</span></button>
+            </div>
+          </div>
+          <div class="row">
+            <address id="contacts" class="text">
+              <ul id="contactsList">
+                <!--
+                <li>&nbsp;</li>
+                <li class="contactsElement"><a href="tel:(+xx) xxx.xxx.xxxx"><svg class="ContactsIcons" src="../res/icons/IconaCELL.svg" alt="cellphone link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850.39 850.39"><title>IconaTELE</title><path d="M425.2,0C190.37,0,0,190.37,0,425.2S190.37,850.39,425.2,850.39,850.39,660,850.39,425.2,660,0,425.2,0ZM614.76,591.7c-5.25,4.91-10.94,9.38-16,14.48C568.27,636.91,530.5,645.41,489,641.91c-29.39-2.47-55.84-14.09-80.16-29.8C335.59,564.79,279.5,501.87,241.59,423.19c-12.38-25.69-19-53.05-19-86.63.71-30.16,9.44-62.51,32.62-89.63,11.19-13.09,24.92-23.62,38.72-33.74,11.49-8.42,25-8.41,35.44,1,26.2,23.53,45.25,52.24,53.67,86.73,3.54,14.52-1.43,28-13.45,37.95-8.52,7.05-17.19,13.93-25.82,20.86-15.81,12.68-19.71,25.05-14.05,44.64A94.83,94.83,0,0,0,340,427a310.67,310.67,0,0,0,78.82,87.81c3.08,2.33,6.27,4.56,9.56,6.59,21.62,13.34,37.9,11.42,55.89-6.6,5.08-5.09,9.81-10.54,15-15.51,16.7-16,37.14-19.71,57.09-8.07a240.78,240.78,0,0,1,62.82,53.61C632.89,561.15,630.53,576.93,614.76,591.7Z"/></svg><span>(+39) 348.0373502 &nbsp;</span></a></li>
+                <li class="contactsElement"><a href="mailto:picardi.andrea@virgilio.it"><svg class="ContactsIcons" src="../res/icons/IconaEMAIL.svg" alt="email link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 849.22 849.22"><title>IconaEMAIL</title><path d="M429.5,342.26c-49.14,1.54-91.6,44.25-92.92,93.47-1,37.53,22,65.65,58.92,72.15,47.29,8.32,97.2-29.81,106.51-81.38C510.43,379.81,476.85,340.78,429.5,342.26Z" transform="translate(-1.17 -1.01)"/><path d="M425.78,1C191.28,1,1.17,191.12,1.17,425.62S191.28,850.23,425.78,850.23s424.61-190.1,424.61-424.61S660.29,1,425.78,1ZM671,552.16c-17.94,36-47.6,55.16-87.41,54.32-40.41-.85-70.14-21.29-86.06-58.85-4.84-11.42-7.59-13-19-6.56C409.33,580.47,329,559,296.7,493.46c-33.88-68.84,3.32-160.07,79.49-191.64,48.68-20.17,95.44-16.33,137.7,17.84,3.27,2.65,5.33,3.58,11.29,2.29,15.18-3.28,30.8,3.31,46,6.86,6.36,1.49,2.16,8.62,1.37,12.91q-13.75,74.38-28,148.66c-2.24,11.79-4.43,23.58-.19,35.34,6,16.64,22.18,28.88,39.75,28.83,19.22-.06,33-9.58,40.86-27.09,37.82-84,29.26-163.38-27.67-235.35C536,214.7,432.06,189.33,341.55,226.56,252.63,263.13,196.39,355,204.8,449.87A222.5,222.5,0,0,0,381.32,648.49a183.38,183.38,0,0,0,33.88,4.07c8.84.18,11.3,3.37,10.68,11.56-.57,7.56-1.06,15.34.08,22.76,2.6,17-5.25,19.12-20,18C267.77,694.23,156.15,579.2,152.26,442.72c-4.08-143.41,97.52-264,237.84-282.29,164-21.39,309.35,105.9,309.32,287.62C699.28,473.81,689.91,514.15,671,552.16Z" transform="translate(-1.17 -1.01)"/></svg><span>picardi.andrea@virgilio.it &nbsp;</span></a></li>
+                <li class="contactsElementSeparator"></li>
+                -->
+                <li class="contactsElement"><a href="https://www.linkedin.com/in/Andrea-Picardi"><svg class="ContactsIcons" src="../res/icons/In_LOGO.svg" alt="LinkedIn link" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 396 395.9" xml:space="preserve"> <path d="M0,0v395.9H396V0H0z M117.6,334.9c0,1.8-0.3,2.6-2.4,2.6c-18.1,0-36.2,0-54.3,0h-2.3l0,0V150.8c0-2.8,0-2.8,2.9-2.8h53.4 c2.8,0,2.8,0,2.8,2.8C117.5,212.2,117.5,273.5,117.6,334.9z M88,122.8c-0.3,0-0.6,0-0.8,0c-18.7-0.3-33.7-15.7-33.4-34.4 C53.5,69.8,69.3,54,88,54.1c0.1,0,0.1,0,0.2,0c18.9,0,34.3,15.4,34.2,34.4C122.3,107.8,107.5,122.7,88,122.8z M337.9,334.9v2.5 l-0.1,0.1h-56.7c-2.7,0-2.7,0-2.7-2.6c0-33.8,0-67.7-0.1-101.6c0.1-7.6-1.3-15.2-4.2-22.3c-4.1-9.2-11.2-14.1-21.2-15.2 c-5.7-0.7-11.5-0.2-17,1.4c-9.6,2.8-15.7,9.3-19,18.6c-2.3,6.2-3.5,12.7-3.5,19.3c-0.1,33.2-0.3,66.4-0.4,99.6c0,2.9,0,2.9-2.8,2.9 c-17.9,0-35.8-0.1-53.7,0c-1.9,0-2.6-0.5-2.6-2.5c0-61.5,0-123,0-184.5c0-2.5,0.1-2.5,2.5-2.5H208c2.6,0,2.6,0,2.6,2.7V172 c0,0.6,0.1,1.3,0.1,2l0.5,0.1c0.5-0.8,0.9-1.6,1.4-2.4c8.3-12.8,19.9-21.1,34.5-25.4c5.8-1.7,11.7-2.6,17.7-2.7 c11.4-0.3,22.5,0.9,33.3,4.7c11.7,4,21.6,12.2,27.8,22.9c5.2,8.8,8,18.4,9.6,28.4c1.1,6.2,1.7,12.4,1.9,18.7 c0.3,26.6,0.4,53.3,0.5,79.9C337.9,310.5,337.9,322.8,337.9,334.9z"/></svg><span>www.linkedin.com/in/Andrea-Picardi &nbsp;</span></a></li>
+                <li class="contactsElement"><a href="https://www.researchgate.net/profile/Andrea-Picardi"><svg class="ContactsIcons" src="../res/icons/Re_LOGO.svg" alt="ResearchGate link"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" xml:space="preserve"> <path d="M0,0v32h32V0H0z M22.1,28.6c-0.3,0.4-1.5,0.5-3,0.2c-2.3-0.4-3.7-1.8-7.1-6.9c-1.2-1.7-1.2-1.7-2.3-1.8	c-1.7-0.1-1.5-0.4-1.5,3.2c0.1,4.1,0,4,2.4,4.4c0.6,0.1,0.7,0.1,0.7,0.5c0,0.4,0,0.4-4.2,0.4c-3.9,0-4.2,0-4.3-0.2 c-0.2-0.5,0.1-0.7,0.9-0.8c1-0.2,1.5-0.6,1.6-1.3c0.1-0.3,0.1-3.7,0-7.7c0-8.3,0-7.9-1.5-8.2c-1-0.2-1.3-0.4-1.1-0.8	C2.8,9.4,3,9.4,7.4,9.3c6.5-0.1,7.7,0.1,9.5,1.6c1.8,1.6,2.1,4.1,0.6,6.2c-0.6,0.9-1.9,1.9-2.9,2.3c-0.5,0.2-0.8,0.4-0.8,0.4 c0,0.2,1.5,2.3,2.4,3.4c2.4,3,3.8,4.1,5.1,4.5C22.1,28,22.3,28.2,22.1,28.6z M29.3,9.5c-0.1,2.1-0.7,3.2-2.1,3.8	c-0.9,0.4-2.2,0.5-3.1,0.4c-2.5-0.5-3.3-2-3.2-5.9c0.1-2.2,0.2-2.8,1.1-3.7c1.5-1.6,5.1-1.4,6.5,0.3c0.6,0.7,0.5,0.9-0.3,1.2 c-0.6,0.2-0.6,0.2-1.2-0.4c-1.4-1.3-3.7-0.8-4.1,0.9c-0.2,0.8-0.2,3.9,0,4.7c0.6,2,3.9,2,4.5,0c0.4-1.3,0.3-1.4-1.3-1.5 c-0.8,0-0.8,0-0.8-0.7c0-0.6,0-0.6,1.8-0.7C29.4,7.9,29.4,7.8,29.3,9.5z"/>	<path d="M13.3,11.2c-0.8-0.3-1-0.4-3-0.4c-2.1,0-2.1,0-2.2,3.7c0,2,0,3.8,0,3.9c0.1,0.3,3.8,0.2,4.7-0.2 C16.1,16.9,16.3,12.5,13.3,11.2z"/></svg><span>www.researchgate.net/profile/Andrea-Picardi &nbsp;</span></a></li>
+                <li class="contactsElement"><a href="https://www.github.com/TheAges"><svg class="ContactsIcons" src="../res/icons/GitLab_LOGO.svg" alt="GitHab link" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 396 396" xml:space="preserve"> <path d="M0,0v396h396V0H0z M244.5,344.4c-7.7,1.5-10.3-3.3-10.3-7.3c0-5.1,0.4-21.3,0.4-41.4c0-13.9-4.8-23.1-10.3-27.9 c33.7-3.7,68.9-16.5,68.9-74.4c0.2-15-5.3-29.6-15.4-40.7c1.5-3.7,7-19.1-1.5-40c0,0-12.4-4-41.4,15.4c-24.7-6.9-50.8-6.9-75.5-0.1 c-28.6-19.4-41.4-15.4-41.4-15.4c-8.1,20.9-2.9,36.3-1.5,40c-10.1,11.1-15.6,25.7-15.4,40.7c0,57.9,35.6,71.1,68.9,74.8 c-4.4,3.7-8.1,10.3-9.5,20.2c-8.8,4-30.4,10.6-44-12.5c0,0-8.1-14.3-23.1-15.4c0,0-14.7-0.4-1.1,9.2c0,0,9.9,4.4,16.9,22 c0,0,8.8,27.2,51,18c0.4,12.8,0.4,24.6,0.4,28.2c0,4-2.6,8.8-10.3,7.3C90.2,324.9,46.9,268.4,46.9,201.7 c0-83.4,67.6-151.1,151.1-151.1c83.2,0,151.1,67.8,150,150.3C348,267.7,304.7,324.1,244.5,344.4z"/></svg><span>www.github.com/TheAges &nbsp;</span></a></li>
+              </ul>
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="background-canvas"></div>
+
+  <div id="main" class="container d-none">
+
+    <div id="first-section"  class="row vh-100 align-items-center hide">
+      <div class=" col-12  col-sm-12 col-md-12 col-lg-8 col-xl-7">
+        <div id="cover" >
+          <p id="paragrapghTop" class="with-backcover">In today's ever-changing technological landscape, where themes like Artificial Intelligence Systems, Asset Digitalisation, and Virtual and Simulated Worlds are the driving forces, the conversation between people and the tools we design matters more than ever.</p>
+          <p id="first-divider">&#13 &#13</p>
+          <p id="paragrapghBottom" class="with-backcover">Hi, I'm Andrea, an HMI Specialist and Interaction Designer looking to map, understand, and make this conversation possible.</p>
+            
+          <div id="cursor" class="d-none">&#9608</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="second-section" class="row"> <!-- class="row min-vh-100 align-items-center" -->
+      <div class="col-12">
+
+        <div id="topBar-Wrapper" class="">
+          <div  class="row sticky-top align-items-baseline justify-content-end">
+            <div id="nav-menu" class="col-12 col-lg-3 order-1 order-lg-2 appearAble">
+              <div id="nav-menu-BG"></div>
+              <div class="row">
+                <div id="homeMenuButton-works"  class="col-auto">
+                  <a onclick="goToHomepage()"> <!--</a>href="../index.html"-->
+                    <div class="nav-menu-item hoverable" >
+                      <span class="material-symbols-outlined button-icon">home</span>
+                    </div>
+                  </a>
+                </div>
+                <div id="homeMenuButton-about"  class="col">
+                  <a onclick="goToHomepage()"> <!--</a>href="../index.html"-->
+                    <div class="nav-menu-item hoverable" >
+                      <span>Home</span>
+                    </div>
+                  </a>
+                </div>
+                <div id="aboutMenuButton" class="col">
+                  <a onclick="goToAboutpage()">  <!--href="about.html"-->
+                    <div class="nav-menu-item hoverable" >
+                      <span>About Me</span>
+                    </div>
+                  </a>
+                </div>
+                <div id="contactsMenuButton"  class="col">
+                  <a onclick="toggleContacts()">
+                    <div class="nav-menu-item hoverable">
+                      <span>Contact</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="content" data-barba="wrapper" class="hide">
+          <div id="belowTopbar-Wrapper" class="barbaContent" data-barba="container" data-barba-namespace="homepage" data-work-key="Automotive_Gesture">
+            
+          <div id="firstParagraph" class="row align-items-baseline">
+            <div class="col-12 col-lg-8 order-2 order-lg-1 with-backcover">
+              <p id="workTitle">Automotive Gestures & Mid-Air Haptics</p>
+
+              <div id="work_informations">
+
+                <div id="works_info_underdescription_row" class="row align-items-baseline work_info_row">
+                  <div class="col-12">
+                    <div class="work_info_underdescription"> Prototyping and testing gesture control with mid-air haptic feedback for tomorrow's shared autonomous vehicles. </div>
+                  </div>
+                </div>
+
+                <div id="works_info_image" class="row align-items-baseline work_info_row">
+                  <div class="col-12">
+                    <div class="imageWapper">
+                      <img src="../res/Images/Automotive_Gestures/hand.png" Title="Image created with NanoBanana" alt="Intro image - hand with arm">
+                    </div>
+                  </div>
+                </div>
+
+                <div id="works_info_client+year+cat_row" class="row align-items-baseline work_info_row">
+
+                  <div class="col-12 col-md-4">
+
+                    <div id="client+year_inner_row" class="row align-items-baseline work_info_inner_row">
+
+                      <div class="col-6 col-md-12">
+                        <div class="work_info_header work_info_underline"> Project </div>
+                        <div class="work_info_text"> Base5G, Work Package 3 </div>
+                      </div>
+
+                      <div class="col-6 col-md-12">
+                        <div class="work_info_header work_info_underline"> Year </div>
+                        <div class="work_info_text"> 2022 &#10138; 2023 </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="col-12 col-md-8">
+
+                    <div class="work_info_header work_info_underline"> Categories </div>
+
+                    <div id="tag_container" >
+                      <span class="work_info_tag">Automotive</span>
+                      <span class="work_info_tag">HCI</span>
+                      <span class="work_info_tag">NUI</span>
+                      <span class="work_info_tag">UX&emsp13;Design</span>
+                      <span class="work_info_tag">UI&emsp13;Design</span>
+                      <span class="work_info_tag">Haptics</span>
+                      <span class="work_info_tag">User-Centred&emsp13;Design</span>
+                      <span class="work_info_tag">User&emsp13;Testing</span>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div id="works_info_brief_row" class="row align-items-baseline work_info_row">
+                  <div class="col-12">
+                    <div class="work_info_header work_info_underline">Brief</div>
+                    <div class="work_info_text"> As autonomous driving and 5G reshape how we travel, the inside of the car can change with it. Starting from a future scenario of a shared autonomous vehicle, we explored an interior where the windshield itself becomes a large, information-rich display, showing navigation, the car's own driving decisions, infotainment, and a live view of the surrounding smart city. That raised a concrete interaction problem: the windshield sits well beyond arm's reach from the passenger seat, so it cannot be touched the way we expect of a screen. Passengers needed a way to reach all of that information comfortably, from where they sit. We explored two answers and put them head to head: mid-air hand gestures with ultrasonic haptic feedback, and a more familiar trackpad. The interaction was designed across the team. We built the high-fidelity driving simulation we tested it in, ran the user study that compared the two approaches with real people, and analysed the data. </div>
+                  </div>
+                </div>
+
+                <div id="works_info_roles_w_team_row_4th" class="row align-items-baseline work_info_row">
+
+                  <div class="col-12 col-sm-6">
+                    <div class="work_info_header work_info_underline">Role(s)</div>
+                    <ul id="rolesList">
+                      <li>Interaction Designer</li>
+                      <li>UX Researcher</li>
+                      <li>Advanced Prototyper</li>
+                      <li>Testing Lead</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-12  col-sm-6">
+                    <div class="work_info_header work_info_underline">Core Team</div>
+                    <ul id="teamList">
+                      <li>Pierstefano Bellani</li>
+                      <li>Andrea Picardi</li>
+                      <li>Federica Caruso</li>
+                      <li>Flora Gaetani</li>
+                    </ul>
+                  </div>
+
+                </div>
+
+
+                <div id="works_info_external_row" class="row align-items-baseline work_info_row">
+
+                  <div class="col-12">
+                    <div class="work_info_header work_info_underline">Exteral Links</div>
+                    <ul id="linkList">
+                      <li><a href="https://www.base5g.polimi.it/">Project website</a></li>
+                      <li><a href="https://www.mdpi.com/2076-3417/13/17/9901">Research paper</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div  id="pageWork" class="row">
+            <div class="col-12 col-lg-8">
+              <div class="row with-backcover">
+
+                <div>
+
+                  <div class="col-12 workSectionTitle">
+                    From scenario to interface
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>The starting point came from another team, who had done the upstream research: a scenario for a shared, connected, autonomous vehicle, complete with system maps, user journeys, and an analysis of passenger needs. Our work began where the research left off, deciding how people would actually use the space. Here we worked closely with Akkodis on the interior, their automotive division leading the cabin and the 3D model while we shaped the HMI and the interactions inside it.</p>
+
+                  <div class="col-12 workImgGroup">
+                    <div class="row">
+                      <div class="col-12 col-md-6">
+                        <div class="imageWapper">
+                          <img src="../res/Images/Automotive_Gestures/Interior_FL.png" alt="Car interior front">
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div class="imageWapper">
+                          <img src="../res/Images/Automotive_Gestures/Interior_BR.png" alt="Car interior back">
+                        </div>
+                      </div>
+                      <div class="col-12 imgDescription">
+                        The vehicle interior, developed with Akkodis and rebuilt in Unity for the study. Cabin and 3D model by Akkodis; HMI and interactions by our team.
+                      </div>
+                    </div>
+                  </div>
+
+                    <p>We saw an opportunity in head-up display technology and pushed it further, turning the whole windshield into the primary interface, an infotainment surface and a window onto the smart city at once. To keep that much information calm and readable, we organised the display into three areas: driving information on the left, navigation and the road situation in the middle, and a five-item menu on the right for navigation, calls, music, documents, and points of interest. Information about the surrounding buildings was layered in as the car moved, so the windshield doubled as a live window onto the city. The aim throughout was to let people focus on one thing at a time instead of facing a wall of data.</p>
+                    <p>Then came the central question: how do you operate a screen you cannot reach? We deliberately set two interaction methods against each other. The first was mid-air hand gestures, letting passengers control the windshield without touching anything. Research told us early that mid-air gestures fail without clear, immediate feedback, so we paired them with Ultraleap Stratos, which produces tactile sensations in mid-air using focused ultrasound. The second was a trackpad mounted within easy reach, using the familiar swipe, tap, and scroll people already know. </p>
+                  </div>
+
+                  <div class="col-12 workImgGroup">
+                    <div class="row">
+                      <div class="col-12 col-md-6">
+                        <div class="imageWapper">
+                          <img src="../res/Images/Automotive_Gestures/UltraLeap_Stratos.jpg" alt="UltraLeap Stratos">
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div class="imageWapper">
+                          <img src="../res/Images/Automotive_Gestures/stratos_anim.gif" alt="UltraLeap Stratos working principle">
+                        </div>
+                      </div>
+                      <div class="col-12 imgDescription">
+                        The Ultraleap Stratos, which tracks the hand and delivers mid-air haptic feedback through focused ultrasound, showing how it works. Credit to Ultraleap.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>The gesture set was defined together by the team, and I led the trackpad side of it. We worked out six core interactions and designed them alongside the interface rather than after it, so the two reinforced each other: the five-item menu existed to suit a finger gesture, and submenus were laid out as grids or scrolls to favour a swipe. Each interaction was then defined for both devices, so the same intent mapped to a mid-air gesture and to a trackpad equivalent, which kept the comparison fair.</p>
+                  </div>
+
+                  <div class="col-12 workImgGroup">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="imageWapper">
+                          <img class="largeImage" src="../res/Images/Automotive_Gestures/Gestures.png" alt="Input modalities">
+                        </div>
+                      </div>
+                      <div class="col-12 imgDescription">
+                        The six interactions, defined for both the mid-air (left) and trackpad (right) devices. (a) finger: a single finger to open a menu, or the number of fingers on the pad; (b) swipe: a right-to-left hand movement, or the same on the pad, to move between items; (c) grid: moving the hand through a virtual grid to select, or a directional finger-swipe; (d) confirm: a grab into a fist, or a tap; (e) back: a quick upward hand-swipe, or a finger-swipe from centre to bottom; (f) volume: a pinch and vertical move, or a two-finger drag. (Adapted from Bellani, Picardi et al., 2023)
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 workSectionTitle">
+                    Building the simulation in Unity
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>Designing the interaction was only half the work. To evaluate it honestly, both methods had to be experienced in something close to the real thing, so we built a high-fidelity simulation on the Politecnico di Milano iDrive driving simulator.</p>
+                    <p>We built it in the Unity game engine, placing a virtual autonomous vehicle in a moving urban scene that mirrored the study scenario, so participants felt like passengers in a car that was genuinely driving itself through a city. The simulator reproduced the windshield across three screens, and we rebuilt the interface inside Unity as a working GUI rather than a static image, wiring up the panels so they responded live. We integrated the Ultraleap Stratos device, mapped the gesture set to system actions, and tuned the haptic feedback so a gesture in mid-air produced a tactile sensation at the right moment. The trackpad ran through the same interface, so both modalities drove identical functionality and nothing but the input method changed between groups.</p>
+                    <p>The point of all this was rigour. A functional build like this, rather than a clickable mock-up, is what made it possible to measure the real interaction instead of an approximation of it. The windshield reacted in real time to real gestures, and the haptics fired as they would in a shipped system, so the study tested the actual interaction rather than a rough stand-in for it.</p>
+                  </div>
+
+                  <div class="col-12 workImgGroup">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="imageWapper">
+                          <img src="../res/Images/Automotive_Gestures/Unity.png" alt="Unity development">
+                        </div>
+                      </div>
+                      <div class="col-12 imgDescription">
+                        Unity development.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 workSectionTitle">
+                    Running the study
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>With the simulation working, we designed the evaluation and ran it. It happened in two passes. During the design phase we ran formative pilot tests, small and informal, to catch problems early and feed fixes back into the gestures and the interface before they hardened. In those pilots we used a Wizard of Oz approach to stand in for the parts of the system not yet built in the simulation, and a guided think-aloud so problems surfaced as people worked through the interface. Once the system was stable, we ran a summative study to compare the two input methods properly.</p>
+                    <p>The question behind it was direct: does an advanced mid-air interface actually differ from a familiar baseline in how well, and how comfortably, people can use it? We went in expecting a difference in efficiency and workload, with the null hypothesis being that the two would perform the same. The summative study used a between-subjects design: each participant used only one interface, either the Stratos mid-air haptics or the trackpad, never both. A within-subjects design, where the same person tries both, would have been more reliable, but running both interfaces in one sitting stretched the session to around two hours, which pilot participants found too long, so we split people into two groups instead. Twenty took part, ten per group, all aged between 20 and 29. Both groups worked through the same five tasks on the same windshield GUI, chosen to cover the everyday range of in-car interaction:</p>
+                    <ol class="list--spaced-numbered">
+                      <li> <i>Set the destination and confirm the trip.</i></li>
+                      <li> <i>Select a song and adjust the volume.</i></li>
+                      <li> <i>Take an incoming call and end it.</i></li>
+                      <li> <i>Find, open, and skim a presentation in the file menu.</i></li>
+                      <li> <i>Select a point of interest.</i></li>
+                    </ol>
+                    <p>Each session opened with a moderated warm-up so participants understood the gestures before anything was measured, which kept the study from capturing first-contact confusion instead of the interface itself. The evaluation was deliberately mixed-methods, combining quantitative measures, standardised questionnaires, and qualitative interviews so the numbers and the reasons behind them could be read together. Each measure stood in for a construct we cared about: task success and errors for effectiveness, completion time for efficiency, and how often people glanced down at the input device, logged with a Pupil Core eye-tracker, as a proxy for visual distraction, the attention each method pulled from the road. For the subjective side we used two standardised instruments, the Raw NASA-TLX for perceived workload and AttrakDiff for the overall quality of the experience, and we closed each session with a short interview to surface the reasoning the numbers could not.</p>
+                  </div>
+
+                  <div class="col-12 workImgGroup">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="imageWapper">
+                          <img src="../res/Images/Automotive_Gestures/Test_Session.png" alt="Test session with eye-tracking on the iDrive simulator">
+                        </div>
+                      </div>
+                      <div class="col-12 imgDescription">
+                        Test session with eye-tracking on the iDrive simulator.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 workSectionTitle">
+                    Analysing the results
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>Pulling the strands together was where the picture formed, and the headline is that the two interfaces came out broadly comparable. With only twenty participants, we used Mann-Whitney U tests rather than assume a normal distribution, and none of the differences reached statistical significance, so we could not reject the null hypothesis that the two interfaces performed the same, and the numbers are best read as directional trends rather than proven effects.</p>
+                    <p>Within that, two things stood out. The eye-tracking leaned in a consistent direction: people tended to glance at the Stratos interface less often than at the trackpad, which would mean less attention pulled from the road, though the difference was not significant and would need a larger sample to confirm. The more robust finding came from the other side of the data. The NASA-TLX, the behaviour observed during the test, and the post-test interviews all agreed that Stratos was more physically tiring, and the cause was concrete. In both variants the subject sat in the simulator seat with their arm on an armrest. With the trackpad, the pad sat level with the top of the armrest, so the hand could rest flush on it. With Stratos, the device sat around twenty centimetres below the hand, its optimal operating distance, so while the arm was supported, the hand had to stay floating above the device for every interaction. That sustained hover is what made the touchless interaction more tiring, and the agreement across three independent sources is the one trade-off we would stand behind from this study.</p>
+                  </div>
+
+                  <div class="col-12 workImgGroup">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="imageWapper">
+                          <img class="largeImage"  src="../res/Images/Automotive_Gestures/NASA_TLX_Res.png" alt="Raw NASA-TLX results, Stratos versus trackpad">
+                        </div>
+                      </div>
+                      <div class="col-12 imgDescription">
+                        Raw NASA-TLX results, Stratos versus trackpad: higher physical demand, effort, and frustration for the mid-air interface. (From Bellani, Picardi et al., 2023).
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>AttrakDiff filled in the experience side. Stratos was perceived as more innovative and more premium, but several participants were confused by specific gestures, mistook some menu icons, and wanted clearer feedback on whether the system had understood them.</p>
+                  </div>
+
+                  <div class="col-12 workImgGroup">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="imageWapper">
+                          <img src="../res/Images/Automotive_Gestures/AttrakDiff_Res.png" alt="AttrakDiff portfolio matrix, Stratos versus trackpad">
+                        </div>
+                      </div>
+                      <div class="col-12 imgDescription">
+                        AttrakDiff portfolio matrix, Stratos versus trackpad: both interfaces land in the desirable zone, with the mid-air interface rated higher on hedonic quality. (From Bellani, Picardi et al., 2023).
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 workText">
+                    <p>Taken together, the qualitative signal pointed to clear, actionable direction: keep the touchless interaction for its low visual demand, but reduce its physical cost, sharpen the feedback for each gesture, simplify the harder gestures, and make the icons clearer.</p>
+                    <p>A few limits frame all of this. The sample was small, so the comparison catches trends more than firm effects. The fatigue is partly an artefact of this prototype, since the required floating-hand position, rather than mid-air interaction as such, drove much of the physical cost, so a better ergonomic setup might soften it. And the trackpad, though familiar in daily life, was new inside a car for almost everyone, which likely narrowed the gap between the two.</p>
+                    <p>The study produced a usable result: a clear, evidence-backed trade-off between the low visual demand of touchless input and its physical cost, plus a concrete set of fixes. That closed the loop the project ran, from a concept, to a working prototype, to evidence solid enough to act on.</p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+    
+                <!-- Project prev/next navigation -->
+        <div id="projNav" class="row justify-content-between align-items-center appearAble">
+          <div class="col-6 d-flex justify-content-start">
+            <button id="projNavPrev" class="proj_nav_button hoverable" onclick="">
+              <span class="material-symbols-outlined button-icon">arrow_back</span>
+              <span class="proj_nav_label">Previous</span>
+            </button>
+          </div>
+          <div class="col-6 d-flex justify-content-end">
+            <button id="projNavNext" class="proj_nav_button hoverable" onclick="">
+              <span class="proj_nav_label">Next</span>
+              <span class="material-symbols-outlined button-icon">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="footer"  class="row justify-content-around align-items-center appearAble">
+          <div  id="footer-text" class="col-12 col-lg-10 col-xl-11">
+            <span>&copy; <span id="footerYear"></span> Andrea Picardi. Images belong to their respective owners where indicated. Background shader based on webgl-noise by Stefan Gustavson (<a href="https://github.com/stegu/webgl-noise/blob/master/LICENSE">licence</a>), modified and coded with AI.</span>
+          </div>
+          <div id="footer-actions"  class="col-12 col-lg-2 col-xl-1 d-flex justify-content-center">
+            <button class="short_button hoverable" onclick="restartALL()"><span class="material-symbols-outlined button-icon">restart_alt</span></button>
+            <button class="short_button hoverable" onclick="goOnTOP()"><span class="material-symbols-outlined button-icon">arrow_upward</span></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer Year Update-->
+  <script>document.getElementById("footerYear").textContent = new Date().getFullYear();</script>
+
+
+  <!-- Change colors Accent, Background and Cureves colors (needed if the user enter or reload the page)-->
+  <script  type="text/javascript">
+
+    document.querySelector(':root').style.setProperty('--main-accent-color',  'rgb(26,163,131)'); //change acent color of interface
+
+    document.querySelector(':root').style.setProperty('--main-bg-color',  'rgb(255,255,255)');  //change background color of interface 
+    colorBG.set(1.0,1.0,1.0); //change acent color of bacground cover
+
+    colorLINES.set(0.1,0.64,0.51); //change lines color of bacground cover
+
+  </script>
+
+  <!-- Initialized Barba.js for page translitions -->
+  <script src="../js/barbaScript.js"></script>
+
+  <!-- NO JS COVER JavaScript snippet -->
+    <script type="text/javascript">
+      document.getElementById("noJsCover").style.display="none";
+      document.getElementById("content").classList.remove("hide");
+    </script>
+    
+  </body>
+</html>

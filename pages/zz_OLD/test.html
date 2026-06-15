@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    
+
+    <!-- load barba (UMD version) -->
+    <script src="https://unpkg.com/@barba/core"></script>
+  </head>
+  <body>
+
+    <!-- define the wrapper and the container -->
+    <div data-barba="wrapper">
+      <div class="barbaContent" data-barba="container" data-barba-namespace="page-a">
+        <h1>Testpage Page</h1>
+        <br>
+        <a href="..\index.html">go back</a>
+        <br>
+      </div>
+    </div>
+
+    <!-- init barba with a simple opacity transition -->
+    <script src="barbaScript.js"></script>
+  </body>
+</html>
