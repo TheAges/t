@@ -1148,13 +1148,11 @@ li {
   align-items: center;
   gap: 0.4em;
   padding: 0.5em 1em;
-  background: transparent;
-  border: 1px solid var(--main-accent-color);
-  border-radius: 2em;
+  background: var(--main-bg-color);;
+  border: 2px solid var(--main-accent-color);
   color: var(--main-accent-color);
   cursor: pointer;
   font: inherit;
-  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .proj_nav_button .button-icon {

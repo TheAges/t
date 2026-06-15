@@ -35,8 +35,8 @@
       // local preview. Structure assumed: root holds index.html, sub-pages live in /pages/.
       (function () {
         var p = window.location.pathname;
-        p = p.replace(/[^\/]*\.html?$/, ""); // strip a trailing file name if present
-        p = p.replace(/pages\/$/, "");         // climb out of /pages/ to the site root
+        p = p.replace(/[^\/]*\.html?$/, "");
+        p = p.replace(/pages\/$/, "");
         if (!p.endsWith("/")) p += "/";
         window.SITE_ROOT = p;
       })();
@@ -487,28 +487,28 @@
                 </div>
 
               </div>
+            
+              <!-- Project prev/next navigation -->
+              <div id="projNav" class="row justify-content-between align-items-center appearAble">
+                <div class="col-6 d-flex justify-content-start">
+                  <button id="projNavPrev" class="proj_nav_button hoverable" onclick="">
+                    <span class="material-symbols-outlined button-icon">arrow_back</span>
+                    <span class="proj_nav_label">Previous</span>
+                  </button>
+                </div>
+                <div class="col-6 d-flex justify-content-end">
+                  <button id="projNavNext" class="proj_nav_button hoverable" onclick="">
+                    <span class="proj_nav_label">Next</span>
+                    <span class="material-symbols-outlined button-icon">arrow_forward</span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
 
           </div>
         </div>
     
-                <!-- Project prev/next navigation -->
-        <div id="projNav" class="row justify-content-between align-items-center appearAble">
-          <div class="col-6 d-flex justify-content-start">
-            <button id="projNavPrev" class="proj_nav_button hoverable" onclick="">
-              <span class="material-symbols-outlined button-icon">arrow_back</span>
-              <span class="proj_nav_label">Previous</span>
-            </button>
-          </div>
-          <div class="col-6 d-flex justify-content-end">
-            <button id="projNavNext" class="proj_nav_button hoverable" onclick="">
-              <span class="proj_nav_label">Next</span>
-              <span class="material-symbols-outlined button-icon">arrow_forward</span>
-            </button>
-          </div>
-        </div>
-
         <div id="footer"  class="row justify-content-around align-items-center appearAble">
           <div  id="footer-text" class="col-12 col-lg-10 col-xl-11">
             <span>&copy; <span id="footerYear"></span> Andrea Picardi. Images belong to their respective owners where indicated. Background shader based on webgl-noise by Stefan Gustavson (<a href="https://github.com/stegu/webgl-noise/blob/master/LICENSE">licence</a>), modified and coded with AI.</span>
